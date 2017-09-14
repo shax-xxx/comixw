@@ -254,10 +254,14 @@ class Dhcpd extends Model
 	 */
 	function GetArpTable()
 	{
+		global $Re_Ip;
 		$lines= $this->RunShellCommand('/usr/sbin/arp -an');
 
-		// ? (10.0.0.2) at 00:d0:da:51:d3:c0 on em1
-		$re_arp= "/^\? \((.*)\) at (.*) on (.*)$/m";
+		// Host                                 Ethernet Address    Netif Expire    Flags
+		// 192.168.1.1                          08:00:27:22:5a:71     em1 19m38s
+		// test3.my.domain                      08:00:27:b4:5d:29     em1 permanent l
+
+		$re_arp= "/($Re_Ip)\s+(\w+:\w+:\w+:\w+:\w+:\w+)\s+(\w+)/m";
 
 		$logs= array();
 		if (preg_match_all($re_arp, $lines, $match, PREG_SET_ORDER)) {
@@ -275,36 +279,30 @@ class Dhcpd extends Model
 	{
 		global $Re_Ip;
 
-		// lease 192.168.1.1 {
-		//         starts 2 2009/09/08 17:52:36;
-		//         ends 3 2009/09/09 05:52:36;
-		//         hardware ethernet 00:1f:e2:61:96:9a;
-		//         client-hostname "phenom";
-		// }
-		// lease 192.168.1.2 {
-		//         starts 4 2009/09/10 21:26:28;
-		//         ends 5 2009/09/11 09:26:28;
-		//         hardware ethernet 00:00:f0:76:85:9e;
-		//         uid 01:00:00:f0:76:85:9e;
-		//         client-hostname "laptop";
-		
-		$re_starts= '\s*starts\s+(\d+)\s+(\d+\/\d+\/\d+)\s+(\d+:\d+:\d+)\s*';
-		$re_ends= '\s*ends\s+(\d+)\s+(\d+\/\d+\/\d+)\s+(\d+:\d+:\d+)\s*';
+		//	lease 192.168.25.1 {
+		//	    starts 4 2017/04/13 21:58:08 UTC;
+		//	    ends 5 2017/04/14 09:58:08 UTC;
+		//	    hardware ethernet 08:00:27:22:5a:71;
+		//	    uid 01:08:00:27:22:5a:71;
+		//	    client-hostname "win7";
+		//	}
+
+		$re_starts= '\s*starts\s+(\d+)\s+(\d+\/\d+\/\d+)\s+(\d+:\d+:\d+).*';
+		$re_ends= '\s*ends\s+(\d+)\s+(\d+\/\d+\/\d+)\s+(\d+:\d+:\d+).*';
 		$re_mac= '\s*hardware\s+\w+\s+(\w+:\w+:\w+:\w+:\w+:\w+)\s*';
 		$re_uid= '\s*uid\s+(.+)\s*';
 		$re_host= '\s*(client-hostname|hostname)\s+"(.+)"\s*';
 		$re_abandoned= '(\s*(abandoned);\s*|)';
 		
 		$re_lease= "/\s*lease\s+($Re_Ip)\s*\{$re_starts;$re_ends;$re_mac;($re_uid;|)$re_host;$re_abandoned\s*\}\s*/m";
-
 		$lines= $this->GetFile($this->leasesFile);
-		
 		$logs= array();
+
 		if (preg_match_all($re_lease, $lines, $match, PREG_SET_ORDER)) {
 			foreach ($match as $fields) {
 				$cols['IP']= $fields[1];
-				$cols['Starts (GMT)']= "$fields[3] $fields[4]";
-				$cols['Ends (GMT)']= "$fields[6] $fields[7]";
+				$cols['Starts (UTC)']= "$fields[3] $fields[4]";
+				$cols['Ends (UTC)']= "$fields[6] $fields[7]";
 				$cols['MAC']= $fields[8];
 				$cols['Host']= "$fields[12]";
 				$cols['Status']= $fields[14];

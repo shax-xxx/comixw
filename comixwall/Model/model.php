@@ -2564,8 +2564,8 @@ $Modules = array(
     'lease' => array(
         'Fields' => array(
             'IP',
-            'Starts (GMT)',
-            'Ends (GMT)',
+            'Starts (UTC)',
+            'Ends (UTC)',
             'MAC',
             'Host',
             'Status',

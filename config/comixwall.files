@@ -105,6 +105,8 @@ var/log/named.log,640,root,wheel
 var/log/openvpn.log,640,root,wheel
 var/log/snortips.log,640,root,wheel
 var/log/spamd.log,640,root,wheel
+var/log/relayd.log,640,root,wheel
+var/log/pf.log,640,root,wheel
 var/named/etc/named.conf,640,root,_bind
 var/www/cgi-bin/man.cgi,511,root,bin
 var/www/conf/modules/php-5.6.conf,644,root,daemon

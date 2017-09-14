@@ -43,6 +43,8 @@ ftp-proxy.log		type=file mode=0640 uname=root gname=wheel
 monitoring.log		type=file mode=0640 uname=root gname=wheel
 named.log		type=file mode=0640 uname=root gname=wheel
 openvpn.log		type=file mode=0640 uname=root gname=wheel
+relayd.log		type=file mode=0640 uname=root gname=wheel
+pf.log			type=file mode=0640 uname=root gname=wheel
 snortips.log		type=file mode=0640 uname=root gname=wheel
 spamd.log		type=file mode=0640 uname=root gname=wheel
 ..	#var/log
