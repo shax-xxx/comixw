@@ -6,6 +6,9 @@
 SHELL=/bin/sh
 PATH=/bin:/sbin:/usr/bin:/usr/sbin
 HOME=/var/log
+
+# Dumps pf logs to syslog
+@reboot tcpdump -lnettti pflog0 | logger -t pf -p local3.info &
 #
 #minute	hour	mday	month	wday	command
 #

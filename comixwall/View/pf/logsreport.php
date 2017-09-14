@@ -166,7 +166,7 @@ $regexp = stripslashes($_GET['regexp']);
 
 $pfhost = $_SESSION['pfhost']['connect'];
 /// @todo What is $invert_match here? Not defined anywhere
-// $logs = parse_log (`sudo $inst_dir/bin/commandwrapper.sh $pfhost -log -$count $regexp $invert_match`);
+// $logs = parse_log (`doas $inst_dir/bin/commandwrapper.sh $pfhost -log -$count $regexp $invert_match`);
 $View->Controller($Output, 'GetPfwCmdWrapperLog', $pfhost, $count, $regexp);
 $logs= parse_log(implode("\n", $Output));
 $stats = log_stats($logs);

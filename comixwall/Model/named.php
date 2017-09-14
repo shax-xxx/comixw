@@ -38,12 +38,12 @@ require_once($MODEL_PATH.'model.php');
 class Named extends Model
 {
 	public $Name= 'named';
-	public $User= 'root|named';
+	public $User= '_bind';
 	
 	public $ConfFile= '/var/named/etc/named.conf';
 	public $LogFile= '/var/log/named.log';
 
-	public $VersionCmd= '/usr/sbin/named -v';
+	public $VersionCmd= '/usr/local/sbin/named -v';
 
 	public $PidFile= '/var/run/named.pid';
 
@@ -53,7 +53,7 @@ class Named extends Model
 		
 		parent::Model();
 		
-		$this->StartCmd= "/usr/sbin/named > $TmpFile 2>&1 &";
+		$this->StartCmd= "/usr/local/sbin/named > $TmpFile 2>&1 &";
 		
 		$this->Commands= array_merge(
 			$this->Commands,

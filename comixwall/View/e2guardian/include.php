@@ -451,13 +451,6 @@ On slow computers this will be significant.
 Fast computers do not need this option.
 on | off'),
 		),
-    'maxuploadsize' => array(
-        'title' => _TITLE2('Max upload size'),
-        'info' => _HELPBOX2('POST protection (web upload and forms) does not block forms without any file upload, i.e. this is just for blocking or limiting uploads measured in kibibytes after MIME encoding and header bumph
-use 0 for a complete block
-use higher (e.g. 512 = 512Kbytes) for limiting
-use -1 for no blocking'),
-		),
 );
 
 /** General content scanner configuration.

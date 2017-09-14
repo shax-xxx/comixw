@@ -36,16 +36,16 @@
 require_once('../lib/vars.php');
 require_once('../lib/view.php');
 
-class Nginx extends View
+class Httpd extends View
 {
-	public $Model= 'nginx';
-	public $Layout= 'nginx';
+	public $Model= 'httpd';
+	public $Layout= 'httpd';
 
-	function Nginx()
+	function Httpd()
 	{
 		$this->LogsHelpMsg= _HELPWINDOW('These logs may be important for diagnosing web server related problems.');
 
-		$this->ConfHelpMsg= _HELPWINDOW('Since this web administration interface depends on the nginx web server, you should be careful while modifying these options. By default, the web server is configured to serve this web interface only, hence the default values should suffice for most purposes. However, OpenBSD/nginx is a full-featured HTTP server, and you can configure it to serve web sites too.');
+		$this->ConfHelpMsg= _HELPWINDOW('Since this web administration interface depends on the httpd web server, you should be careful while modifying these options. By default, the web server is configured to serve this web interface only, hence the default values should suffice for most purposes. However, OpenBSD/httpd is a full-featured HTTP server, and you can configure it to serve web sites too.');
 	
 		$this->Config= array(
 			'ServerAdmin' => array(
@@ -106,5 +106,5 @@ class Nginx extends View
 	}
 }
 
-$View= new Nginx();
+$View= new Httpd();
 ?>

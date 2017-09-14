@@ -1,5 +1,5 @@
 <?php
-/* $ComixWall: setup.php,v 1.11 2009/11/19 18:29:29 soner Exp $ */
+/* $ComixWall: info.php,v 1.15 2009/11/10 18:47:50 soner Exp $ */
 
 /*
  * Copyright (c) 2004-2009 Soner Tari.  All rights reserved.
@@ -33,22 +33,14 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/** @file
- * View setup.
- */
+require_once('include.php');
 
-/// Whether to display help boxes on the right.
-$ShowHelpBox= TRUE;
-
-/// Default reload rate in seconds for dynamic pages, e.g. live pages.
-$DefaultReloadRate= 10;
-
-/// Default session timeout in secs.
-$SessionTimeout= 300;
-
-/// Time server to use.
-$TimeServer= 'utcnist.colorado.edu';
-
-/// How many NVP sets will be printed horizontally
-$NvpColCount= 2;
+$View->ProcessRestartStopRequests();
+		
+$Reload= TRUE;
+require_once($VIEW_PATH.'header.php');
+		
+$View->PrintStatusForm(PRINT_COUNT);
+PrintHelpWindow(_HELPWINDOW('This web administration interface is served by httpd web server, OpenBSD/httpd. If you stop the web server, you will lose your connection to this web interface. You can restart it on the command line.'));
+require_once($VIEW_PATH.'footer.php');
 ?>

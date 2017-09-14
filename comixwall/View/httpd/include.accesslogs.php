@@ -36,13 +36,13 @@
 require_once('../lib/vars.php');
 require_once('../lib/view.php');
 
-class Nginxlogs extends View
+class Httpdlogs extends View
 {
-	public $Model= 'nginxlogs';
+	public $Model= 'httpdlogs';
 
-	function Nginxlogs()
+	function Httpdlogs()
 	{
-		$this->LogsHelpMsg= _HELPWINDOW('These are access logs of the nginx web server. Logs contain logged-in users, client IP addresses, and pages accessed.');
+		$this->LogsHelpMsg= _HELPWINDOW('These are access logs of the httpd web server. Logs contain logged-in users, client IP addresses, and pages accessed.');
 	}
 	
 	function FormatDate($date)
@@ -77,5 +77,5 @@ class Nginxlogs extends View
 	}
 }
 
-$View= new Nginxlogs();
+$View= new Httpdlogs();
 ?>

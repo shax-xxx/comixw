@@ -52,7 +52,7 @@ class Model
 	
 	public $LogFile= '';
 	
-	protected $psCmd= '/bin/ps arwwx -o pid,start,%cpu,time,%mem,rss,vsz,stat,pri,nice,tty,user,group,command | /usr/bin/grep -E <PROC>';
+	protected $psCmd= '/bin/ps arwwx -o pid,start,%cpu,time,%mem,rss,vsz,stat,pri,nice,tty,user=Long_User_Name,group=Long_Group_Name,command | /usr/bin/grep -E <PROC>';
 
 	/// Max number of iterations to try while starting or stopping processes.
 	const PROC_STAT_TIMEOUT= 100;
@@ -707,11 +707,11 @@ class Model
 	 */
 	function CheckAuthentication($user, $passwd)
 	{
+		syslog(LOG_NOTICE, $passwd);	
 		/// @warning Args should never be empty, htpasswd expects 2 args
 		$passwd= $passwd == '' ? "''" : $passwd;
-		
 		// For debug purpose
-		//cwc_syslog(LOG_NOTICE, __FILE__, __FUNCTION__, __LINE__, "original:  $passwd");
+		cwc_syslog(LOG_NOTICE, __FILE__, __FUNCTION__, __LINE__, "original:  $passwd");
 
 		/// @warning Have to trim newline chars, or passwds do not match
 		$passwdfile= file($this->passwdFile, FILE_IGNORE_NEW_LINES);
@@ -724,7 +724,6 @@ class Model
 			list($u, $p)= explode(':', $nvp, 2);
 			$passwdlist[$u]= $p;
 		}
-		
 		if (password_verify($passwd, $passwdlist[$user])) {
 			return TRUE;
 		} else {
@@ -2096,20 +2095,22 @@ class Model
 	 */
 	function GetPartitions()
 	{
-		if (($contents= $this->GetFile('/etc/fstab')) !== FALSE) {
+		$cmd= "/bin/df -h";
+		if (($contents= $this->RunShellCommand($cmd)) !== FALSE) {
 			$contents= explode("\n", $contents);
 			
 			$partitions= array();
 			foreach ($contents as $line) {
-				if (preg_match('/^(\S+)\s+(\S+)/', $line, $match)) {
-					$partitions[$match[1]]= $match[2];
+				if (preg_match('/^(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)/', $line, $match)) {
+					$partitions[$match[1]]= $match[6];
 				}
 			}
+			// remove unwanted title element
+			unset($partitions['Filesystem']);
 			return $partitions;
-		}
+			}
 		return FALSE;
 	}
-	
 	/** Finds sysctl temp and fan sensors.
 	 *
 	 * There may be multiple sensors. And we don't know which is CPU sensor.
@@ -2683,9 +2684,9 @@ $Modules = array(
         		),
     		),
 		),
-    'nginx' => array(
+    'httpd' => array(
         'Name' => _TITLE2('Web Server'),
-        'Path' => 'nginx',
+        'Path' => 'httpd',
         'Fields' => array(
             'Date',
             'Time',
@@ -2706,7 +2707,7 @@ $Modules = array(
         		),
     		),
 		),
-    'nginxlogs' => array(
+    'httpdlogs' => array(
         'Name' => _TITLE2('Web Server Access'),
         'Fields' => array(
             'DateTime',
@@ -3261,8 +3262,8 @@ $ModelsToLogConfig= array(
 	'openssh',
 	'ftp-proxy',
 	'dante',
-	'nginx',
-	'nginxlogs',
+	'httpd',
+	'httpdlogs',
 	'cwwui_syslog',
 	'cwc_syslog',
 	'monitoring',

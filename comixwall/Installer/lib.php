@@ -113,7 +113,7 @@ function ApplyConfig()
 			cwwui_syslog(LOG_ERR, __FILE__, __FUNCTION__, __LINE__, "Failed setting dante internal net: $lancidr");
 		}
 		
-		$View->Model= 'nginx';
+		$View->Model= 'httpd';
 		if (!$View->Controller($output, 'SetWebalizerHostname', $lanip)) {
 			cwwui_syslog(LOG_ERR, __FILE__, __FUNCTION__, __LINE__, "Failed setting webalizer hostname: $lanip");
 		}

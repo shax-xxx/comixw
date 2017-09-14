@@ -50,7 +50,6 @@
 function cwc_syslog($prio, $file, $func, $line, $msg)
 {
 	global $LOG_LEVEL, $LOG_PRIOS;
-
 	try {
 		openlog("cwc", LOG_PID, LOG_LOCAL0);
 		
@@ -89,8 +88,8 @@ $ModelFiles= array(
 	'snortalerts'		=> 'snortalerts.php',
 	'snortips'			=> 'snortips.php',
 	'openvpn'			=> 'openvpn.php',
-	'nginx'			=> 'nginx.php',
-	'nginxlogs'		=> 'nginxlogs.php',
+	'httpd'			=> 'httpd.php',
+	'httpdlogs'		=> 'httpdlogs.php',
 	'cwwui_syslog'		=> 'cwwui.php',
 	'cwc_syslog'		=> 'cwc.php',
 	'clamav'			=> 'clamav.php',
@@ -120,8 +119,8 @@ $Models= array(
 	'snortalerts'		=> 'Snortalerts',
 	'snortips'			=> 'Snortips',
 	'openvpn'			=> 'Openvpn',
-	'nginx'			=> 'Nginx',
-	'nginxlogs'		=> 'Nginxlogs',
+	'httpd'			=> 'Httpd',
+	'httpdlogs'		=> 'Httpdlogs',
 	'cwwui_syslog'		=> 'Cwwui',
 	'cwc_syslog'		=> 'Cwc',
 	'clamav'			=> 'Clamav',

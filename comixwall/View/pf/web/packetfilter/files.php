@@ -74,7 +74,7 @@ if ($_GET['reload']) {
   unset($_SESSION['filename']);
   $_SESSION['pfw'] = new pfw();
 /// @todo Fix this
-//   $filename = exec ($_SESSION['pfhost']['sudo']. " $inst_dir/bin/packetfilter.sh ". $_SESSION['pfhost']['connect']. " -r");
+//   $filename = exec ($_SESSION['pfhost']['doas']. " $inst_dir/bin/packetfilter.sh ". $_SESSION['pfhost']['connect']. " -r");
   $View->Controller($Output, 'GetPfwPfFileName', $_SESSION['pfhost']['connect']);
   $filename= $Output[0];
   $_SESSION['pfw']->parseRulebase (file_get_contents($filename));

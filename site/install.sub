@@ -399,6 +399,7 @@ GetPkgDesc() {
 		e2guardian-*) 				pkgdesc="Web Filter" ;;
 		bigblacklist*) 				pkgdesc="Web Filter Categories" ;;
 		squid-*) 				pkgdesc="HTTP Proxy" ;;
+		isc-bind-*) 				pkgdesc="BIND: DNS server and tools" ;;
 		snort-*) 				pkgdesc="Intrusion Detection" ;;
 		snortrules-*)				pkgdesc="Intrusion Detection Rules" ;;
 		snortips-*) 				pkgdesc="Intrution Prevention" ;;
@@ -609,7 +610,7 @@ __EOT
 
 			_pkgshortname=${_f%%-*}
 			case $_f in
-			#php-5.5.14p0.tgz
+			#php-5.6.18.tgz
 			php-*)
 				_pkgshortname=${_f%-*}
 				;;
@@ -619,7 +620,7 @@ __EOT
 				_pkgaddopts=-u
 				_pkgname=${_f%%-*}
 				case $_f in
- 				#e2guardian-3.0.3.tgz
+ 				#e2guardian-3.4.0.3.tgz
 				e2guardian-*)
 					# Delete previous clamd flavor
 					pkg_delete $_pkgname
@@ -629,38 +630,30 @@ __EOT
 					mv /etc/e2guardian/contentscanners/clamdscan.conf \
 						/etc/e2guardian/contentscanners/clamdscan.conf.orig
 					;;
-				#openvpn-2.3.2.tgz
+				#openvpn-2.3.10.tgz
 				openvpn-*)
 					# OpenVPN uses lzo2 now
 					pkg_delete -F dependencies lzo
 					;;
-  				#squid-3.4.6p1.tgz
+  				#squid-3.5.14.tgz
 				squid-*)
 					_pkgaddopts="-u -F update"
 					;;
-  				#php-5.5.14p0.tgz
+  				#php-5.6.18.tgz
 				php-*)
 					_pkgname=${_f%-*}
 					_pkgaddopts="-u -F update"
 					;;
-  				#pmacct-1.5.0rc2.tgz
+  				#symon-2.87p3.tgz
+				symon-*)
+					pkg_add -u symux
+					pkg_add -u rrdtool
+					;;
+  				#pmacct-1.5.0rc2p0.tgz
 				pmacct-*)
 					# Version 0.11.6 was under sysutils port, 0.12.5x is under net now
 					# hence pkg_add cannot update
 					pkg_delete -F dependencies $_pkgname
-					;;
-				#snort-2.9.6.1.tgz
-				snort-*)
-					# plugins lying around (untouched during upgrade) of the previous
-					# version prevent snort starting, clean them up
-					# TODO: This should be handled by the port itself
-					#rm /usr/local/lib/snort_dynamicengine/libsf_engine.so.2.0
-					#rm /usr/local/lib/snort_dynamicpreprocessor/libsf_dcerpc_preproc.so.1.0
-					#rm /usr/local/lib/snort_dynamicpreprocessor/libsf_dns_preproc.so.2.0
-					#rm /usr/local/lib/snort_dynamicpreprocessor/libsf_ftptelnet_preproc.so.2.0
-					#rm /usr/local/lib/snort_dynamicpreprocessor/libsf_smtp_preproc.so.2.0
-					#rm /usr/local/lib/snort_dynamicpreprocessor/libsf_ssh_preproc.so.1.0
-					#rm /usr/local/lib/snort_dynamicpreprocessor/libsf_ssl_preproc.so.0.0
 					;;
 				esac
 			fi
@@ -687,24 +680,14 @@ __EOT
 				;;
 			php-*)
 				pkg_add php-pcntl
-				pkg_add php-fpm
+				pkg_add php-fastcgi
 				;;
+			symon-*)
+				pkg_add rrdtool
+				pkg_add symux
+			;;
 			esac
 			;;
-
-#		libpcap.inst.*)
-#			resp=y
-#			_pcapdir=$ROOTDIR/root/libpcap.inst
-#			[[ $MODE == upgrade ]] && [[ -f $_clamavdbdir/main.cld ]] && \
-#				ask_yn "Replace ClamAV virus signature database?" yes
-
-#			if [[ $resp == y ]]; then
-#				[[ -d $_pcapdir ]] || mkdir -p $_pcapdir
-#				ftp $_ftp_active -o - -V -m "$_src/$_f" | tar zxf - -C $_pcapdir && \
-#				chown root:wheel $_pcapdir/*
-#				$_pcapdir/lib_pcap_inst $_pcapdir
-#			fi
-#			;;
 
 		clamavdb.*)
 			resp=y
@@ -1089,7 +1072,7 @@ install_sets() {
 finish_up() {
 
 	/sbin/ldconfig /usr/local/lib /usr/X11R6/lib/
-	ln -s /usr/local/bin/php-5.5 /usr/local/bin/php
+	ln -s /usr/local/bin/php-5.6 /usr/local/bin/php
 	
 	if [[ -f /var/www/htdocs/comixwall/Installer/install.php ]]; then
 		echo "Running post-install script..."
@@ -1135,7 +1118,7 @@ __EOT
 # #######################################################################
 # Initial actions common to both installs and upgrades.
 # #######################################################################
-VERSION='5.6'
+VERSION='5.9'
 ARCH=$(/usr/bin/machine)
 
 VMAJ=${VERSION%%\.*}
@@ -1166,28 +1149,29 @@ CDDEVS=$(scan_dmesg "${MDCDDEVS:-/^cd[0-9][0-9]* /s/ .*//p}")
 [[ -z $CDDEVS ]] && CDDEVS="cd0,cd1,cd2"
 
 # Selected sets will be installed in the order they are listed in $THESETS.
-THESETS="clamav-0.98.4p0.tgz \
-		clamavdb.tar.gz \
-		e2guardian-3.0.3.tgz \
-		bigblacklist_comixwall.tar.gz \
-		squid-3.4.6p1.tgz \
-		snort-2.9.6.1p0.tgz \
-		snortrules-snapshot-2962.tar.gz \
-		snortips-4.6.tgz \
-		openvpn-2.3.2.tgz \
-		dante-1.4.0p0.tgz \
-		webalizer-2.23.08.30p0.tgz \
-		symon-2.86p5.tgz \
-		pmacct-1.5.0rc2.tgz \
-		pftop-0.7p13.tgz \
-		php-5.5.14p0.tgz \
-		mc-4.8.12.tgz \
-		wget-1.15.tgz \
-		colorls-5.4p0.tgz \
-		$CW_WEBIF_TARFILE \
+THESETS="clamav-0.99p0.tgz \
+                clamavdb.tar.gz \
+                e2guardian-3.4.0.3.tgz \
+                bigblacklist_comixwall.tar.gz \
+                squid-3.5.14.tgz \
+                isc-bind-9.10.3pl3.tgz \
+                snort-2.9.7.3.tgz \
+                snortrules-snapshot-2976.tar.gz \
+                snortips-4.6.tgz \
+                openvpn-2.3.10.tgz \
+                dante-1.4.1.tgz \
+                webalizer-2.23.08.30p4.tgz \
+                symon-2.87p3.tgz \
+                pmacct-1.5.0rc2p0.tgz \
+                pftop-0.7p15.tgz \
+                php-5.6.18.tgz \
+                mc-4.8.15p0.tgz \
+                wget-1.16.3p0.tgz \
+                colorls-5.7p1.tgz \
+                $CW_WEBIF_TARFILE \
 		$CW_CONFIG_TARFILE"
 
-SANESETS="php-5.5.14p0.tgz \
+SANESETS="php-5.6.18.tgz \
 		$CW_WEBIF_TARFILE"
 
 # Introduce ourselves.

@@ -47,8 +47,8 @@ snortips.log		type=file mode=0640 uname=root gname=wheel
 spamd.log		type=file mode=0640 uname=root gname=wheel
 ..	#var/log
 named			type=dir mode=0755 uname=root gname=wheel
-etc			type=dir mode=0750 uname=root gname=named
-named.conf		type=file mode=0640 uname=root gname=named
+etc			type=dir mode=0750 uname=root gname=_bind
+named.conf		type=file mode=0640 uname=root gname=_bind
 ..	#var/named/etc
 ..	#var/named
 tmp			type=dir mode=0755 uname=root gname=wheel
@@ -61,10 +61,9 @@ man.cgi			type=file mode=0511 uname=root gname=bin
 ..	#var/www/cgi-bin
 conf			type=dir mode=0755 uname=root gname=daemon
 modules			type=dir mode=0755 uname=root gname=daemon
-php-5.5.conf		type=file mode=0644 uname=root gname=daemon
+php-5.6.conf		type=file mode=0644 uname=root gname=daemon
 ..	#var/www/conf/modules
 .htpasswd		type=file mode=0644 uname=root gname=wheel
-httpd.conf		type=file mode=0644 uname=root gname=daemon
 ..	#var/www/conf
 htdocs			type=dir mode=0755 uname=root gname=wheel
 comixwall		type=dir mode=0755 uname=root gname=wheel
@@ -96,17 +95,23 @@ lists			type=dir mode=0755 uname=root gname=wheel
 bannedrooms		type=dir mode=0755 uname=root gname=wheel
 default			type=file mode=0644 uname=root gname=wheel
 ..	#etc/e2guardian/lists/bannedrooms
+addheaderregexplist	type=file mode=0644 uname=root gname=wheel
 bannedextensionlist4	type=file mode=0644 uname=root gname=wheel
 bannedmimetypelist4	type=file mode=0644 uname=root gname=wheel
 bannedsitelist		type=file mode=0644 uname=root gname=wheel
 bannedphraselist	type=file mode=0644 uname=root gname=wheel
 bannedurllist		type=file mode=0644 uname=root gname=wheel
-exceptionphraselist	type=file mode=0644 uname=root gname=wheel
 exceptionsitelist	type=file mode=0644 uname=root gname=wheel
 exceptionurllist	type=file mode=0644 uname=root gname=wheel
 greysitelist		type=file mode=0644 uname=root gname=wheel
 greyurllist		type=file mode=0644 uname=root gname=wheel
+sslsiteregexplist	type=file mode=0644 uname=root gname=wheel
+urlredirectregexplist	type=file mode=0644 uname=root gname=wheel
 weightedphraselist	type=file mode=0644 uname=root gname=wheel
+refererexceptionsitelist	type=file mode=0644 uname=root gname=wheel
+refererexceptionurllist	type=file mode=0644 uname=root gname=wheel
+embededreferersitelist	type=file mode=0644 uname=root gname=wheel
+embededrefererurllist	type=file mode=0644 uname=root gname=wheel
 ..	#etc/e2guardian/lists
 e2guardian.conf	type=file mode=0644 uname=root gname=wheel
 e2guardianf1.conf	type=file mode=0644 uname=root gname=wheel
@@ -148,18 +153,16 @@ server.key		type=file mode=0644 uname=root gname=bin
 ..	#etc/ssl/private
 server.crt		type=file mode=0644 uname=root gname=bin
 ..	#etc/ssl
-nginx			type=dir mode=0755 uname=root gname=wheel
-nginx.conf		type=file mode=0644 uname=root gname=wheel
-..	#etc/nginx
-php-5.5			type=dir mode=0755 uname=root gname=daemon
+php-5.6			type=dir mode=0755 uname=root gname=daemon
 pcntl.ini		type=file mode=0644 uname=root gname=bin
-..	#etc/php-5.5
-php-5.5.ini		type=file mode=0644 uname=root gname=daemon
-php-fpm.conf		type=file mode=0644 uname=root gname=wheel
+..	#etc/php-5.6
+php-5.6.ini		type=file mode=0644 uname=root gname=daemon
+php-fpm.conf		type=file mode=0644 uname=root gname=daemon
 httpd.conf		type=file mode=0644 uname=root gname=wheel
 clamd.conf		type=file mode=0644 uname=root gname=wheel
 dhcpd.conf		type=file mode=0644 uname=root gname=wheel
 freshclam.conf		type=file mode=0644 uname=root gname=wheel
+login.conf		type=file mode=0644 uname=root gname=wheel
 motd			type=file mode=0664 uname=root gname=wheel
 ntpd.conf		type=file mode=0644 uname=root gname=wheel
 newsyslog.conf		type=file mode=0644 uname=root gname=wheel
@@ -171,6 +174,7 @@ rc.local		type=file mode=0644 uname=root gname=wheel
 rc.shutdown		type=file mode=0644 uname=root gname=wheel
 sockd.conf		type=file mode=0644 uname=root gname=wheel
 sudoers			type=file mode=0440 uname=root gname=wheel
+doas.conf		type=file mode=0440 uname=root gname=wheel
 symon.conf		type=file mode=0644 uname=root gname=wheel
 symux.conf		type=file mode=0644 uname=root gname=wheel
 sysctl.conf		type=file mode=0644 uname=root gname=wheel

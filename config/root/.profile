@@ -10,7 +10,7 @@ alias ..='cd ..'
 set +o emacs-usemeta
 export LC_CTYPE="ru_RU.UTF-8"
 
-export PKG_PATH=./:ftp://mirror.internode.on.net/pub/OpenBSD/`uname -r`/packages/`machine -a`/
+export PKG_PATH=./:http://mirror.yandex.ru/pub/OpenBSD/`uname -r`/packages/`machine -a`/
 
 export PS1="\w # "
 

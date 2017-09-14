@@ -1,5 +1,5 @@
 <?php
-/* $ComixWall: cwlogs.php,v 1.14 2009/11/20 12:01:39 soner Exp $ */
+/* $ComixWall: httpdlogs.php,v 1.11 2009/11/23 08:47:43 soner Exp $ */
 
 /*
  * Copyright (c) 2004-2009 Soner Tari.  All rights reserved.
@@ -34,55 +34,83 @@
  */
 
 /** @file
- * ComixWall logs.
+ * Httpd access logs.
  */
 
 require_once($MODEL_PATH.'httpd.php');
 
-class Cwlogs extends Httpd
+class Httpdlogs extends Httpd
 {
+	public $Name= 'httpdlogs';
+	
+	public $LogFile= '/var/www/logs/access.log';
+
 	function ParseLogLine($logline, &$cols)
 	{
 		global $Re_Ip;
+	
+		//10.0.0.11 - - [26/Sep/2009:03:03:45 +0300] "GET /symon/graph.php?61ea9e7cb820b19cc116fc5eb37490de HTTP/1.1" 200 31949
+		//10.0.0.11 - - [26/Sep/2009:03:04:23 +0300] "GET /images/run.png HTTP/1.1" 304 -
+		//10.0.0.11 - - [25/Sep/2009:20:05:54 +0300] "POST /snortips/conf.php HTTP/1.1" 200 11063
+		//10.0.0.11 - - [08/Oct/2009:12:56:03 +0300] "GET / HTTP/1.1" 302 5
+		$datetime= '\[(\d+\/\w+\/\d+):(\d+:\d+:\d+)\s*[\w+]*\]';
+		$ip= "($Re_Ip)";
+		$mtd= '(GET|POST|\S+)';
+		$link= '(\S*)';
+		$code= '(\d+)';
+		$size= '(\d+|-)';
+		$rest= '(.*)';
 
-		if ($this->ParseSyslogLine($logline, $cols)) {
-			$re_user= '(\w+|)';
-			$re_host= "($Re_Ip|)";
-			$re_loglevel= '(LOG_EMERG|LOG_ALERT|LOG_CRIT|LOG_ERR|LOG_WARNING|LOG_NOTICE|LOG_INFO|LOG_DEBUG)';
-			$re_file= '([\w\/\.]+\.php)';
-			$re_func= '(\w+)';
-			$re_line= '(\d+)';
-			
-			$re_logheader= "\s+$re_loglevel\s*($re_user@$re_host|)\s+$re_file:\s+$re_func\s+\($re_line\):";
-			
-			if (preg_match("/$re_logheader/", $logline, $match)) {
-				$cols['LogLevel']= $match[1];
-				$cols['User']= $match[3];
-				$cols['IP']= $match[4];
-				$cols['File']= $match[5];
-				$cols['Function']= $match[6];
-				$cols['Line']= $match[7];
-				
-				$re_nocolon= '([^:]+)';
-				$re_rest= '(.*)';
-				
-				$re= "/$re_logheader\s+$re_nocolon:\s+$re_rest$/";
-				if (preg_match($re, $logline, $match)) {
-					$cols['Reason']= $match[8];
-					$cols['Log']= $match[9];
-				}
-				else {
-					$re= "/$re_logheader\s+$re_rest$/";
-					if (preg_match($re, $logline, $match)) {
-						$cols['Reason']= $match[8];
-						// Reset Log column set to $logline by ParseSyslogLine()
-						$cols['Log']= '';
-					}
-				}
+		$re= "/^$ip\s+.*\s+$datetime\s+\"$mtd\s+$link\s+HTTP\/\d+\.\d+\"\s+$code\s+$size\s+$rest$/";
+		if (preg_match($re, $logline, $match)) {
+			$cols['IP']= $match[1];
+			$cols['Date']= $match[2];
+			$cols['Time']= $match[3];
+			$cols['DateTime']= $cols['Date'].' '.$cols['Time'];;
+			$cols['Mtd']= $match[4];
+			$cols['Link']= $match[5];
+			$cols['Code']= $match[6];
+			$cols['Size']= $match[7];
+			$cols['Other']=$match[8];
+			if ($cols['Size'] == '-') {
+				$cols['Size']= 0;
 			}
 			return TRUE;
 		}
+		else if ($this->ParseSyslogLine($logline, $cols)) {
+			$cols['DateTime']= $cols['Date'].' '.$cols['Time'];
+			$cols['IP']= _('NA');
+			return TRUE;
+		}
 		return FALSE;
+	}
+
+	function PostProcessCols(&$cols)
+	{
+		// Exclude encoded image names, but include submenus
+		preg_match('/^([^?]+(\?submenu=.*|)).*$/', $cols['Link'], $match);
+		$cols['Link']= $match[1];
+	}
+
+	function GetDateRegexp($date)
+	{
+		global $MonthNames;
+		
+		// Match all years
+		$re= '.*';
+		if ($date['Month'] == '') {
+			$re= '.*\/'.$re;
+		}
+		else {
+			$re= $MonthNames[$date['Month']].'\/'.$re;
+			if ($date['Day'] == '') {
+				$re= '.*\/'.$re;
+			}
+			else {
+				$re= $date['Day'].'\/'.$re;
+			}
+		}
+		return $re;
 	}
 }
 ?>

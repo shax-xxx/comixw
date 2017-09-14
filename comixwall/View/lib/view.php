@@ -399,8 +399,9 @@ class View
 			$argv= array_slice($argv, 1);
 
 			if ($this->EscapeArgs($argv, $cmdline)) {
+
 				$locale= $_SESSION['Locale'];
-				$cmdline= "sudo $cwc $locale $this->Model $cmdline";
+				$cmdline= "doas $cwc $locale $this->Model $cmdline";
 				
 				// Init command output
 				$output= array();

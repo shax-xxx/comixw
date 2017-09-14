@@ -38,7 +38,7 @@ require_once($MODEL_PATH.'model.php');
 class Ftpproxy extends Model
 {
 	public $Name= 'ftp-proxy';
-	public $User= 'proxy';
+	public $User= '_ftp_proxy';
 	
 	public $LogFile= '/var/log/ftp-proxy.log';
 	

@@ -138,7 +138,6 @@ function Authentication($passwd)
 		exec('/bin/sleep 5');
 		LogUserOut('Authentication failed');
 	}
-
 	if (!$View->Controller($Output, 'CheckAuthentication', $_SESSION['USER'], sha1($passwd))) {
 		cwwui_syslog(LOG_NOTICE, __FILE__, __FUNCTION__, __LINE__, 'Password mismatch');
 		// Throttle authentication failures

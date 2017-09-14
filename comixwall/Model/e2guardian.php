@@ -1171,9 +1171,6 @@ $GeneralfilterConfig = array(
     'createlistcachefiles' => array(
         'type' => STR_on_off,
 		),
-    'maxuploadsize' => array(
-        'type' => INT_M1_0_UP,
-		),
 );
 
 /** General content scanner configuration.

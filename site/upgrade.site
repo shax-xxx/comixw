@@ -37,24 +37,24 @@ MODE=upgrade
 # include common subroutines and initialization code
 . install.sub
 
-DEFAULTSETS="clamav-0.98.4p0.tgz \
+DEFAULTSETS="clamav-0.99p0.tgz \
                 clamavdb.tar.gz \
-                e2guardian-3.0.3.tgz \
+                e2guardian-3.4.0.3.tgz \
                 bigblacklist_comixwall.tar.gz \
-                squid-3.4.6p1.tgz \
-                snort-2.9.6.1p0.tgz \
-                snortrules-snapshot-2962.tar.gz \
+                squid-3.5.14.tgz \
+                snort-2.9.7.3.tgz \
+                snortrules-snapshot-2976.tar.gz \
                 snortips-4.6.tgz \
-                openvpn-2.3.2.tgz \
-                dante-1.4.0p0.tgz \
-                webalizer-2.23.08.30p0.tgz \
-                symon-2.86p5.tgz \
-                pmacct-1.5.0rc2.tgz \
-                pftop-0.7p13.tgz \
-                php-5.5.14p0.tgz \
-                mc-4.8.12.tgz \
-                wget-1.15.tgz \
-                colorls-5.4p0.tgz \
+                openvpn-2.3.10.tgz \
+                dante-1.4.1.tgz \
+                webalizer-2.23.08.30p4.tgz \
+                symon-2.87p3.tgz \
+                pmacct-1.5.0rc2p0.tgz \
+                pftop-0.7p15.tgz \
+                php-5.6.18.tgz \
+                mc-4.8.15p0.tgz \
+                wget-1.16.3p0.tgz \
+                colorls-5.7p1.tgz \
                 $CW_WEBIF_TARFILE \
 
 install_sets 2>&1 | tee -a $LOG_FILE

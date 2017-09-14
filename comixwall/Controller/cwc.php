@@ -36,7 +36,7 @@
 
 /** @file
  * Proxying to run all the shell commands.
- * This way we only have one entry in sudoers file.
+ * This way we only have one entry in doas.conf file.
  * @todo Continually check for security issues.
  */
 

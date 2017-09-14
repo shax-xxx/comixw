@@ -1,11 +1,12 @@
 # $ComixWall: rc.conf.local,v 1.6 2009/10/26 00:06:51 soner Exp $
 pf=			# Packet filter / NAT
 pflogd_flags="-d 5"	# add more flags, ie. "-s 256"
+#pflogd_flags="NO"
 ntpd_flags=
 dhcpd_flags="em1"
-named_flags=
 ftpproxy_flags="-vv -D6"
 apmd_flags="-C"
-#httpd_flags="-vvv"
-nginx_flags=""
-pkg_scripts="php_fpm"
+httpd_flags="-vvv"
+pkg_scripts="php56_fpm isc_named"
+isc_named_flags=
+php56_fpm_flags=

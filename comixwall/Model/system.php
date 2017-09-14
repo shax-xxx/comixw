@@ -89,7 +89,7 @@ class System extends Model
 			'dhcpd_flags',
 			'named_flags',
 			'ftpproxy_flags',
-			'nginx_flags',
+			'httpd_flags',
 			'ntpd_flags',
 			'apmd_flags',
 			);
@@ -930,7 +930,7 @@ class System extends Model
 
 	/** Rotate log file via newsyslog.
 	 *
-	 * Daemonized, because newsyslog may kill nginx, hence parent.
+	 * Daemonized, because newsyslog may kill httpd, hence parent.
 	 */
 	function DaemonizedRotateLogFile($file)
 	{
@@ -969,7 +969,7 @@ class System extends Model
 
 	/** Rotate all log files via newsyslog.
 	 *
-	 * Daemonized, because newsyslog kills nginx, hence parent,
+	 * Daemonized, because newsyslog kills httpd, hence parent,
 	 * stopping rotation in the middle, e.g. before compressing files.
 	 */
 	function DaemonizedRotateAllLogFiles()
@@ -1008,7 +1008,7 @@ class System extends Model
 				return FALSE;
 			}
 			// The child is daemonized now, hence survives even if its process group is killed.
-			// This is necessary when rotating nginx logs.
+			// This is necessary when rotating httpd logs.
 
 			$argv= array();
 			if ($param !== '') {
