@@ -36,6 +36,7 @@
 /** @file
  * View base class.
  */
+require_once($ROOT.'/lib/lib.php');
 
 class View
 {

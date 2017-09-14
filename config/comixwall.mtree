@@ -85,7 +85,7 @@ man.cgi			type=file mode=0511 uname=root gname=bin
 ..	#var/www/cgi-bin
 conf			type=dir mode=0755 uname=root gname=daemon
 modules			type=dir mode=0755 uname=root gname=daemon
-php-5.2.conf		type=file mode=0644 uname=root gname=daemon
+php-5.3.conf		type=file mode=0644 uname=root gname=daemon
 ..	#var/www/conf/modules
 .htpasswd		type=file mode=0644 uname=root gname=wheel
 httpd.conf		type=file mode=0644 uname=root gname=daemon
@@ -196,10 +196,10 @@ server.key		type=file mode=0644 uname=root gname=bin
 ..	#etc/ssl/private
 server.crt		type=file mode=0644 uname=root gname=bin
 ..	#etc/ssl
-php-5.2			type=dir mode=0755 uname=root gname=daemon
+php-5.3			type=dir mode=0755 uname=root gname=daemon
 pcntl.ini		type=file mode=0644 uname=root gname=bin
-..	#etc/php-5.2
-php-5.2.ini		type=file mode=0644 uname=root gname=daemon
+..	#etc/php-5.3
+php-5.3.ini		type=file mode=0644 uname=root gname=daemon
 clamd.conf		type=file mode=0644 uname=root gname=wheel
 dhcpd.conf		type=file mode=0644 uname=root gname=wheel
 freshclam.conf		type=file mode=0644 uname=root gname=wheel

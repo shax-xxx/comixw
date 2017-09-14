@@ -37,27 +37,27 @@ MODE=upgrade
 # include common subroutines and initialization code
 . install.sub
 
-DEFAULTSETS="clamav-0.97.2.tgz \
+DEFAULTSETS="clamav-0.97.3p3.tgz \
                 clamavdb.tar.gz \
-                p5-Mail-SpamAssassin-3.3.2p0.tgz \
+                p5-Mail-SpamAssassin-3.3.2p3.tgz \
                 p3scan-2.3.2.tgz \
                 smtp-gated-1.4.18.8.tgz \
                 dansguardian-2.10.1.1.tgz \
                 bigblacklist_comixwall.tar.gz \
-                squid-2.7.STABLE9p11.tgz \
-                snort-2.8.6.tgz \
-                snortrules-snapshot-2.8.tar.gz \
+                squid-2.7.STABLE9p15.tgz \
+                snort-2.9.3.1.tgz \
+                snortrules-snapshot-2931.tar.gz \
                 snortips-4.6.tgz \
                 imspector-0.9.tgz \
-                openvpn-2.1.4.tgz \
+                openvpn-2.2.2p1.tgz \
                 dante-1.3.2p0.tgz \
-                webalizer-2.23.05.29.tgz \
-                symon-2.83p0.tgz \
-                pmacct-0.12.5.tgz \
-                pftop-0.7p5.tgz \
-                php-5.2.17p5.tgz \
-                mc-4.7.5.2.tgz \
-                wget-1.12p1.tgz \
+                webalizer-2.23.05.29p2.tgz \
+                symon-2.83p3.tgz \
+                pmacct-0.12.5p0.tgz \
+                pftop-0.7p9.tgz \
+                php-5.3.10.tgz \
+                mc-4.7.5.3p0.tgz \
+                wget-1.13.4.tgz \
                 $CW_WEBIF_TARFILE \
 
 install_sets 2>&1 | tee -a $LOG_FILE
