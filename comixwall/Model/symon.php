@@ -230,18 +230,15 @@ class Symon extends Model
 
 		$proclist= array(
 			'httpd',
-			'dansguardian',
+			'e2guardian',
 			'snort',
 			'clamd',
-			'p3scan',
 			'perl',
 			'sshd',
 			'squid',
-			'smtp-gated',
 			'named',
 			'dhcpd',
 			'sockd',
-			'imspector',
 			'ftp-proxy',
 			'openvpn',
 		);

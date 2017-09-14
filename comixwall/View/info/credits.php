@@ -65,22 +65,16 @@ $Credits= array(
 		'Link'	=> 'http://www.clamav.net',
 	),
 	array(
-		'Name'	=> 'SpamAssassin',
-		'Desc'	=> _TITLE2('Open source anti-spam software.'),
-		'Img'	=> 'spamassassin.png',
-		'Link'	=> 'http://spamassassin.apache.org/',
-	),
-	array(
 		'Name'	=> 'Squid',
 		'Desc'	=> _TITLE2('De-facto standard among HTTP proxies.'),
 		'Img'	=> 'squid.png',
 		'Link'	=> 'http://www.squid-cache.org/',
 	),
 	array(
-		'Name'	=> 'DansGuardian',
+		'Name'	=> 'E2Guardian',
 		'Desc'	=> _TITLE2('Content scanning web filter.'),
 		'Img'	=> 'dansguardian.png',
-		'Link'	=> 'http://dansguardian.org/',
+		'Link'	=> 'http://e2guardian.org/',
 	),
 	array(
 		'Name'	=> 'Snort',
@@ -99,18 +93,6 @@ $Credits= array(
 		'Desc'	=> _TITLE2('Free OOP scripting language.'),
 		'Img'	=> 'php.gif',
 		'Link'	=> 'http://www.php.net/',
-	),
-	array(
-		'Name'	=> 'P3Scan',
-		'Desc'	=> _TITLE2('Virus and spam scanning POP3 proxy.'),
-		'Img'	=> 'noimage.png',
-		'Link'	=> 'http://p3scan.sourceforge.net/',
-	),
-	array(
-		'Name'	=> 'smtp-gated',
-		'Desc'	=> _TITLE2('Virus and spam scanning SMTP proxy.'),
-		'Img'	=> 'smtp-gated.ico',
-		'Link'	=> 'http://smtp-proxy.klolik.org/',
 	),
 	array(
 		'Name'	=> 'symon',

@@ -71,16 +71,12 @@ class System extends Model
 		 * the lines like the 3rd one above.
 		 */
 		$this->rcLocalServices= array(
-			'/usr/local/sbin/dansguardian',
+			'/usr/local/sbin/e2guardian',
 			'/usr/local/sbin/squid',
 			'/usr/local/bin/snort',
 			'/usr/local/sbin/snortips',
 			'/usr/local/sbin/clamd',
 			'/usr/local/bin/freshclam',
-			'/usr/local/bin/spamd',
-			'/usr/local/sbin/p3scan',
-			'/usr/local/sbin/smtp-gated',
-			'/usr/local/sbin/imspector',
 			'/usr/local/sbin/sockd',
 			'/usr/local/libexec/symux',
 			'/usr/local/libexec/symon',
@@ -95,9 +91,6 @@ class System extends Model
 			'ftpproxy_flags',
 			'httpd_flags',
 			'ntpd_flags',
-			'spamd_flags',
-			'spamd_grey',
-			'spamlogd_flags',
 			'apmd_flags',
 			);
 				
@@ -719,7 +712,7 @@ class System extends Model
 		global $TmpFile;
 		
 		$this->Pkill('rdate');
-		return $this->RunShellCommand("/usr/sbin/rdate -p $timeserver > $TmpFile 2>&1 &");
+		return $this->RunShellCommand("/usr/sbin/rdate -pn $timeserver > $TmpFile 2>&1 &");
 	}
 
 	/** Sets datetime from time server.
@@ -729,7 +722,7 @@ class System extends Model
 		global $TmpFile;
 
 		$this->Pkill('rdate');
-		return $this->RunShellCommand("/usr/sbin/rdate $timeserver > $TmpFile 2>&1 &");
+		return $this->RunShellCommand("/usr/sbin/rdate -n $timeserver > $TmpFile 2>&1 &");
 	}
 
 	function GetRemoteTime()

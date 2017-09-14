@@ -2,8 +2,13 @@
 #
 # sh/ksh initialization
 
-alias l='ls -alF'
+alias l='colorls -alFG'
+alias ls='colorls -G'
 alias ..='cd ..'
+
+# cyrilic  ksh
+set +o emacs-usemeta
+export LC_CTYPE="ru_RU.UTF-8"
 
 export PKG_PATH=./:http://ftp.jaist.ac.jp/pub/OpenBSD/`uname -r`/packages/`machine -a`/
 

@@ -51,16 +51,12 @@ if ($_POST) {
 require_once($VIEW_PATH.'header.php');
 
 $ServiceDescs= array(
-	'/usr/local/sbin/dansguardian'	=> _TITLE2('Web Filter'),
+	'/usr/local/sbin/e2guardian'	=> _TITLE2('Web Filter'),
 	'/usr/local/sbin/squid'			=> _TITLE2('HTTP Proxy'),
 	'/usr/local/bin/snort'			=> _TITLE2('Intrusion Detection'),
 	'/usr/local/sbin/snortips'		=> _TITLE2('Intrusion Prevention'),
 	'/usr/local/sbin/clamd'			=> _TITLE2('Virus Filter'),
 	'/usr/local/bin/freshclam'		=> _TITLE2('Virus DB Update'),
-	'/usr/local/bin/spamd'			=> _TITLE2('Spam Filter'),
-	'/usr/local/sbin/p3scan'		=> _TITLE2('POP3 Proxy'),
-	'/usr/local/sbin/smtp-gated'	=> _TITLE2('SMTP Proxy'),
-	'/usr/local/sbin/imspector'		=> _TITLE2('IM Proxy'),
 	'/usr/local/sbin/sockd'			=> _TITLE2('SOCKS Proxy'),
 	'/usr/local/libexec/symux'		=> _TITLE2('Symux System Monitoring'),
 	'/usr/local/libexec/symon'		=> _TITLE2('Symon System Monitoring'),
@@ -71,9 +67,6 @@ $ServiceDescs= array(
 	'ftpproxy_flags'				=> _TITLE2('FTP Proxy'),
 	'httpd_flags'					=> _TITLE2('Web Server (WUI)'),
 	'ntpd_flags'					=> _TITLE2('Network Time'),
-	'spamd_flags'					=> _TITLE2('Spamd Spam Deferral'),
-	'spamd_grey'					=> _TITLE2('Spamd Grey Listing'),
-	'spamlogd_flags'				=> _TITLE2('Spamd Logging'),
 	'apmd_flags'					=> _TITLE2('Advanced Power Management'),
 	);
 

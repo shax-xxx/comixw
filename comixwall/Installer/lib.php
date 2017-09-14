@@ -104,11 +104,6 @@ function ApplyConfig()
 			cwwui_syslog(LOG_ERR, __FILE__, __FUNCTION__, __LINE__, "Failed setting snort interfaces: $lanif, $wanif");
 		}
 		
-		$View->Model= 'spamd';
-		if (!$View->Controller($output, 'SetStartupIf', $wanif)) {
-			cwwui_syslog(LOG_ERR, __FILE__, __FUNCTION__, __LINE__, "Failed setting spamlogd interfaces: $wanif");
-		}
-		
 		$View->Model= 'dante';
 		if (!$View->Controller($output, 'SetIfs', $lanif, $wanif)) {
 			cwwui_syslog(LOG_ERR, __FILE__, __FUNCTION__, __LINE__, "Failed setting dante interfaces: $lanif, $wanif");
@@ -118,19 +113,14 @@ function ApplyConfig()
 			cwwui_syslog(LOG_ERR, __FILE__, __FUNCTION__, __LINE__, "Failed setting dante internal net: $lancidr");
 		}
 		
-		$View->Model= 'smtp-gated';
-		if (!$View->Controller($output, 'SetConfValue', 'proxy_name', $myname, '', '')) {
-			cwwui_syslog(LOG_ERR, __FILE__, __FUNCTION__, __LINE__, "Failed setting smtp-gated proxy_name: $myname");
-		}
-		
 		$View->Model= 'apache';
 		if (!$View->Controller($output, 'SetWebalizerHostname', $lanip)) {
 			cwwui_syslog(LOG_ERR, __FILE__, __FUNCTION__, __LINE__, "Failed setting webalizer hostname: $lanip");
 		}
 		
-		$View->Model= 'dansguardian';
+		$View->Model= 'e2guardian';
 		if (!$View->Controller($output, 'SetTemplateIps', $lanip)) {
-			cwwui_syslog(LOG_ERR, __FILE__, __FUNCTION__, __LINE__, "Failed setting dansguardian template ips: $lanip");
+			cwwui_syslog(LOG_ERR, __FILE__, __FUNCTION__, __LINE__, "Failed setting e2guardian template ips: $lanip");
 		}
 		
 		$View->Model= 'snortips';

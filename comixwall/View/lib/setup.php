@@ -44,7 +44,7 @@ $ShowHelpBox= TRUE;
 $DefaultReloadRate= 10;
 
 /// Default session timeout in secs.
-$SessionTimeout= 300;
+$SessionTimeout= 9000;
 
 /// Time server to use.
 $TimeServer= 'utcnist.colorado.edu';

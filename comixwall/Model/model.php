@@ -431,7 +431,7 @@ class Model
 	/** Returns all configuration for a given configuration type.
 	 *
 	 * @param[in]	$conf	string Config type
-	 * @param[in]	$group	int Dansguardian group
+	 * @param[in]	$group	int E2guardian group
 	 * @return serialized Array of config items
 	 */
 	function GetConfigValues($conf, $group)
@@ -460,7 +460,7 @@ class Model
 	 *
 	 * @param[in]	$name	string Config name
 	 * @param[in]	$conf	string Config type
-	 * @param[in]	$group	int Dansguardian group
+	 * @param[in]	$group	int E2guardian group
 	 * @return serialized Array of config items
 	 */
 	function GetValue($name, $conf, $group)
@@ -539,7 +539,7 @@ class Model
 	 * @param[in]	$name	string Config name
 	 * @param[in]	$newvalue	new Config value
 	 * @param[in]	$conf	string Config type
-	 * @param[in]	$group	int Dansguardian group
+	 * @param[in]	$group	int E2guardian group
 	 */
 	function SetConfValue($name, $newvalue, $conf, $group)
 	{
@@ -601,7 +601,7 @@ class Model
 	 *
 	 * @param[in]	$name	string Config name
 	 * @param[in]	$conf	string Config type
-	 * @param[in]	$group	int Dansguardian group
+	 * @param[in]	$group	int E2guardian group
 	 * @return boolean Result of action
 	 */
 	function EnableConf($name, $conf, $group)
@@ -665,7 +665,7 @@ class Model
 	 * hence they override this method.
 	 *
 	 * @param[in]	$conf	string Config type
-	 * @param[in]	$group	int Dansguardian group
+	 * @param[in]	$group	int E2guardian group
 	 * @return Config file pathname
 	 */
 	function GetConfFile($conf, $group)
@@ -2348,9 +2348,9 @@ $Modules = array(
         		),
     		),
 		),
-    'dansguardian' => array(
+    'e2guardian' => array(
         'Name' => _TITLE2('Web Filter'),
-        'Path' => 'dansguardian',
+        'Path' => 'e2guardian',
         'Fields' => array(
             'Date',
             'Time',
@@ -2405,7 +2405,7 @@ $Modules = array(
         		),
     		),
 		),
-    'dansguardianlogs' => array(
+    'e2guardianlogs' => array(
         'Name' => _TITLE2('Web Filter Access'),
         'Fields' => array(
             'Date',
@@ -2570,28 +2570,6 @@ $Modules = array(
             'MAC',
             'Host',
             'Status',
-    		),
-		),
-    'spamdwhitedb' => array(
-        'Fields' => array(
-            'IP',
-            'First',
-            'Listed',
-            'Expire',
-            '#Blocked',
-            '#Passed',
-    		),
-		),
-    'spamdgreydb' => array(
-        'Fields' => array(
-            'IP',
-            'From',
-            'To',
-            'First',
-            'Listed',
-            'Expire',
-            '#Blocked',
-            '#Passed',
     		),
 		),
     'named' => array(
@@ -3053,152 +3031,6 @@ $Modules = array(
         		),
     		),
 		),
-    'spamassassin' => array(
-        'Name' => _TITLE2('SPAM Filter'),
-        'Path' => 'spamassassin',
-        'Fields' => array(
-            'Date',
-            'Time',
-            'Process',
-            'Log',
-    		),
-        'HighlightLogs' => array(
-            'REs' => array(
-                'red' => array('identified spam\b'),
-                'yellow' => array('WARNING'),
-                'green' => array('clean message\b'),
-        		),
-    		),
-        'Stats' => array(
-            'Total' => array(
-                'Title' => _STATS('All requests'),
-                'Cmd' => '/bin/cat <LF>',
-                'Needle' => '( spamd\[)',
-                'NVPs' => array(),
-                'BriefStats' => array(),
-                'Counters' => array(
-                    'Ham' => array(
-                        'Field' => 'Ham',
-                        'Title' => _STATS('Ham'),
-                        'Color' => 'Green',
-                        'NVPs' => array(
-                            'User' => _STATS('Account name'),
-                    		),
-                		),
-                    'Spam' => array(
-                        'Field' => 'Spam',
-                        'Title' => _STATS('Spam'),
-                        'Color' => 'Red',
-                        'NVPs' => array(
-                            'User' => _STATS('Account name'),
-                    		),
-                		),
-                    'Bytes' => array(
-                        'Field' => 'Bytes',
-                        'Title' => _STATS('Processed (KB)'),
-                        'Color' => '#FF8000',
-                        'Divisor' => 1000,
-                        'NVPs' => array(
-                            'User' => _STATS('Account name'),
-                    		),
-                		),
-                    'Seconds' => array(
-                        'Field' => 'Seconds',
-                        'Title' => _STATS('Processing time (sec)'),
-                        'Color' => '#FF8000',
-                        'NVPs' => array(
-                            'User' => _STATS('Account name'),
-                    		),
-                		),
-            		),
-        		),
-            'Requests' => array(
-                'Title' => _STATS('All requests'),
-                'Cmd' => "/usr/bin/grep -a ' spamd\[' <LF>",
-                'Needle' => ' bytes.',
-                'Color' => '#004a4a',
-                'NVPs' => array(
-                    'User' => _STATS('Account name'),
-            		),
-        		),
-    		),
-        'SubMenus' => array(
-            'stats.php' => array(
-                'general' => _MENU('General'),
-                'daily' => _MENU('Daily'),
-                'hourly' => _MENU('Hourly'),
-                'live' => _MENU('Live'),
-        		),
-            'logs.php' => array(
-                'archives' => _MENU('Archives'),
-                'live' => _MENU('Live'),
-        		),
-    		),
-		),
-    'spamd' => array(
-        'Name' => _TITLE2('SPAM Deferral'),
-        'Path' => 'spamd',
-        'Fields' => array(
-            'Date',
-            'Time',
-            'Process',
-            'Log',
-    		),
-        'HighlightLogs' => array(
-            'REs' => array(
-                'red' => array(),
-                'yellow' => array('\bconnected\b'),
-                'green' => array('\bdisconnected\b'),
-        		),
-    		),
-        'Stats' => array(
-            'Total' => array(
-                'Title' => _STATS('All connections'),
-                'Cmd' => '/bin/cat <LF>',
-                'Needle' => '( spamd\[)',
-                'NVPs' => array(),
-                'BriefStats' => array(
-                    'List' => _STATS('Blacklists'),
-                    'IP' => _STATS('Deferred IPs'),
-            		),
-                'Counters' => array(
-                    'Seconds' => array(
-                        'Field' => 'Seconds',
-                        'Title' => _STATS('Total deferred time (sec)'),
-                        'Color' => 'Green',
-                        'NVPs' => array(
-                            'IP' => _STATS('IPs'),
-                            'Seconds' => _STATS('Longest deferred (sec)'),
-                            'Date' => _STATS('Connections by date'),
-                            'List' => _STATS('Blacklists'),
-                    		),
-                		),
-            		),
-        		),
-            'Requests' => array(
-                'Title' => _STATS('All connections'),
-                'Needle' => ' disconnected ',
-                'Color' => '#004a4a',
-                'NVPs' => array(
-                    'IP' => _STATS('IPs'),
-                    'List' => _STATS('Blacklists'),
-                    'Date' => _STATS('Connections by date'),
-            		),
-        		),
-    		),
-        'SubMenus' => array(
-            'stats.php' => array(
-                'general' => _MENU('General'),
-                'daily' => _MENU('Daily'),
-                'hourly' => _MENU('Hourly'),
-                'live' => _MENU('Live'),
-        		),
-            'logs.php' => array(
-                'archives' => _MENU('Archives'),
-                'live' => _MENU('Live'),
-        		),
-    		),
-		),
     'openssh' => array(
         'Name' => _TITLE2('OpenSSH'),
         'Path' => 'openssh',
@@ -3344,259 +3176,6 @@ $Modules = array(
         		),
     		),
 		),
-    'p3scan' => array(
-        'Name' => _TITLE2('POP3 Proxy'),
-        'Path' => 'p3scan',
-        'Fields' => array(
-            'Date',
-            'Time',
-            'Process',
-            'Log',
-    		),
-        'HighlightLogs' => array(
-            'REs' => array(
-                'red' => array('Critial abort', 'Cannot connect', 'ERR:', '\bvirus:'),
-                'yellow' => array('Connection from\b'),
-                'green' => array('Clean Exit'),
-        		),
-    		),
-        'Stats' => array(
-            'Total' => array(
-                'Title' => _STATS('All requests'),
-                'Cmd' => '/bin/cat <LF>',
-                'Needle' => '( p3scan\[)',
-                'NVPs' => array(),
-                'BriefStats' => array(
-                    'Result' => _STATS('Results'),
-                    'Virus' => _STATS('Infected'),
-                    'User' => _STATS('Account name'),
-                    'SrcIP' => _STATS('Source IPs'),
-                    'DstIP' => _STATS('Destination IPs'),
-                    'Mails' => _STATS('E-mails per request'),
-            		),
-                'Counters' => array(
-                    'Mails' => array(
-                        'Field' => 'Mails',
-                        'Title' => _STATS('Number of e-mails'),
-                        'Color' => 'Blue',
-                        'NVPs' => array(
-                            'Result' => _STATS('Results'),
-                    		),
-                		),
-                    'Bytes' => array(
-                        'Field' => 'Bytes',
-                        'Title' => _STATS('Processed (KB)'),
-                        'Color' => '#FF8000',
-                        'Divisor' => 1000,
-                        'NVPs' => array(
-                    		),
-                		),
-            		),
-        		),
-            'Requests' => array(
-                'Title' => _STATS('All requests'),
-                'Needle' => '(Connection from )',
-                'Color' => '#004a4a',
-                'NVPs' => array(
-                    'Date' => _STATS('Requests by date'),
-                    'SrcIP' => _STATS('Source IPs'),
-            		),
-        		),
-            'Results' => array(
-                'Title' => _STATS('Relay results'),
-                'Needle' => '(Session done )',
-                'Color' => '#004a4a',
-                'NVPs' => array(
-                    'Result' => _STATS('Results'),
-                    'Mails' => _STATS('E-mails per request'),
-            		),
-        		),
-            'Infected' => array(
-                'Title' => _STATS('Infected e-mails'),
-                'Needle' => '( virus:)',
-                'Color' => 'red',
-                'NVPs' => array(
-                    'From' => _STATS('Senders'),
-                    'To' => _STATS('Recipients'),
-                    'Virus' => _STATS('Virus'),
-            		),
-        		),
-    		),
-        'SubMenus' => array(
-            'stats.php' => array(
-                'general' => _MENU('General'),
-                'daily' => _MENU('Daily'),
-                'hourly' => _MENU('Hourly'),
-                'live' => _MENU('Live'),
-        		),
-            'logs.php' => array(
-                'archives' => _MENU('Archives'),
-                'live' => _MENU('Live'),
-        		),
-    		),
-		),
-    'smtp-gated' => array(
-        'Name' => _TITLE2('SMTP Proxy'),
-        'Path' => 'smtp-gated',
-        'Fields' => array(
-            'Date',
-            'Time',
-            'Process',
-            'Log',
-    		),
-        'HighlightLogs' => array(
-            'REs' => array(
-                'red' => array('VIRUS', 'FOUND', 'SESSION TAKEOVER', 'LOCK:LOCKED'),
-                'yellow' => array('LOCK:EXPIRED', 'NEW'),
-                'green' => array('CLEAN', 'CLOSE'),
-        		),
-    		),
-        'Stats' => array(
-            'Total' => array(
-                'Title' => _STATS('All requests'),
-                'Cmd' => '/bin/cat <LF>',
-                'Needle' => '(CLOSE |SESSION TAKEOVER: |LOCK:LOCKED)',
-                'Color' => '#004a4a',
-                'NVPs' => array(
-                    'SrcIP' => _STATS('Source IPs'),
-                    'ClosedBy' => _STATS('Closed by'),
-            		),
-                'BriefStats' => array(
-                    'Scanner' => _STATS('Scan Types'),
-                    'Result' => _STATS('Scan Results'),
-                    'Sender' => _STATS('Senders'),
-                    'Recipient' => _STATS('Recipients'),
-                    'SrcIP' => _STATS('Source IPs'),
-                    'LockedIP' => _STATS('Locked IPs'),
-            		),
-                'Counters' => array(
-                    'Xmted' => array(
-                        'Field' => 'Xmted',
-                        'Title' => _STATS('Transmitted (KB)'),
-                        'Color' => 'Blue',
-                        'Divisor' => 1000,
-                        'NVPs' => array(
-                            'SrcIP' => _STATS('Source IPs'),
-                    		),
-                		),
-                    'Rcved' => array(
-                        'Field' => 'Rcved',
-                        'Title' => _STATS('Received (KB)'),
-                        'Color' => '#FF8000',
-                        'Divisor' => 1000,
-                        'NVPs' => array(
-                            'SrcIP' => _STATS('Source IPs'),
-                    		),
-                		),
-                    'Trns' => array(
-                        'Field' => 'Trns',
-                        'Title' => _STATS('Number of messages'),
-                        'Color' => 'Blue',
-                        'NVPs' => array(
-                            'SrcIP' => _STATS('Source IPs'),
-                    		),
-                		),
-                    'Rcpts' => array(
-                        'Field' => 'Rcpts',
-                        'Title' => _STATS('Sent messages'),
-                        'Color' => '#FF8000',
-                        'NVPs' => array(
-                            'SrcIP' => _STATS('Source IPs'),
-                    		),
-                		),
-            		),
-        		),
-            'ST' => array(
-                'Title' => _STATS('Session Takeover'),
-                'Needle' => '(SESSION TAKEOVER: |Rejecting |rejected \[|LOCK:LOCKED)',
-                'Color' => 'red',
-                'NVPs' => array(
-                    'SrcIP' => _STATS('Source IPs'),
-                    'STReason' => _STATS('Reasons'),
-            		),
-        		),
-            'Scan' => array(
-                'Title' => _STATS('Virus Scan Requests'),
-                'Needle' => 'SCAN:',
-                'Color' => 'blue',
-                'NVPs' => array(
-                    'ScanSrcIP' => _STATS('Source IPs'),
-                    'Result' => _STATS('Scan Results'),
-            		),
-        		),
-            'Spam' => array(
-                'Title' => _STATS('Spam Scan Requests'),
-                'Needle' => 'SPAM:',
-                'Color' => 'blue',
-                'NVPs' => array(
-                    'ScanSrcIP' => _STATS('Source IPs'),
-                    'Result' => _STATS('Scan Results'),
-            		),
-        		),
-            'Results' => array(
-                'Title' => _STATS('Relay results'),
-                'Needle' => '(RCPT TO:|rejected)',
-                'Color' => '#004a4a',
-                'NVPs' => array(
-                    'Sender' => _STATS('Senders'),
-                    'Recipient' => _STATS('Recipients'),
-                    'RResult' => _STATS('Results'),
-            		),
-        		),
-    		),
-        'SubMenus' => array(
-            'stats.php' => array(
-                'general' => _MENU('General'),
-                'daily' => _MENU('Daily'),
-                'hourly' => _MENU('Hourly'),
-                'live' => _MENU('Live'),
-        		),
-            'logs.php' => array(
-                'archives' => _MENU('Archives'),
-                'live' => _MENU('Live'),
-        		),
-    		),
-		),
-    'imlogs' => array(
-        'Fields' => array(
-            'Date',
-            'Time',
-            'IPPort',
-            'Log',
-    		),
-        'HighlightLogs' => array(
-            'REs' => array(
-                /// v0.7 log format confuses old format parser
-                /// Incrementing by 1 in im parser elsewhere for v0.7
-                //'intext'		=> array('0'),
-                'intext' => array('1'),
-                'outtext' => array('2'),
-                'infilexfer' => array('3'),
-                'outfilexfer' => array('4'),
-        		),
-    		),
-		),
-    'imspector' => array(
-        'Name' => _TITLE2('IM Proxy'),
-        'Path' => 'imspector',
-        'Fields' => array(
-            'Date',
-            'Time',
-            'Process',
-            'Log',
-    		),
-        'SubMenus' => array(
-            'logs.php' => array(
-                'archives' => _MENU('Archives'),
-                'live' => _MENU('Live'),
-        		),
-            'conf.php' => array(
-                'basic' => _MENU('Basic'),
-                'acl' => _MENU('ACL'),
-                'badwords' => _MENU('Badwords'),
-        		),
-    		),
-		),
     'ftp-proxy' => array(
         'Name' => _TITLE2('FTP Proxy'),
         'Path' => 'ftp-proxy',
@@ -3670,25 +3249,20 @@ $Modules = array(
 $ModelsToLogConfig= array(
 	'system',
 	'pf',
-	'dansguardian',
-	'dansguardianlogs',
+	'e2guardian',
+	'e2guardianlogs',
 	'squid',
 	'snort',
 	'snortalerts',
 	'snortips',
 	'clamd',
 	'freshclam',
-	'spamassassin',
-	'p3scan',
-	'smtp-gated',
-	'imspector',
 	'dhcpd',
 	'named',
 	'openvpn',
 	'openssh',
 	'ftp-proxy',
 	'dante',
-	'spamd',
 	'apache',
 	'apachelogs',
 	'cwwui_syslog',

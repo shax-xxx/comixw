@@ -58,7 +58,7 @@ class Squid extends Model
 		
 		parent::Model();
 		
-		$this->StartCmd= "/usr/local/sbin/squid -D > $TmpFile 2>&1 &";
+		$this->StartCmd= "/usr/local/sbin/squid > $TmpFile 2>&1 &";
 		
 		$this->Commands= array_merge(
 			$this->Commands,

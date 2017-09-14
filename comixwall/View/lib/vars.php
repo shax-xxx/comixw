@@ -88,8 +88,8 @@ $CW_MODULES = array(
             'Perms' => $ALL_USERS,
     		),
 		),
-    'dansguardian' => array(
-        'DG_MODULES' => array(
+    'e2guardian' => array(
+        'E2_MODULES' => array(
             'Name' => _MENU('WEB FILTER'),
             'Perms' => $ALL_USERS,
     		),
@@ -115,30 +115,6 @@ $CW_MODULES = array(
     'clamav' => array(
         'VIRUS_MODULES' => array(
             'Name' => _MENU('VIRUS FILTER'),
-            'Perms' => $ALL_USERS,
-    		),
-		),
-    'spamassassin' => array(
-        'SPAMASSASSIN_MODULES' => array(
-            'Name' => _MENU('SPAM FILTER'),
-            'Perms' => $ALL_USERS,
-    		),
-		),
-    'p3scan' => array(
-        'POP3_MODULES' => array(
-            'Name' => _MENU('POP3 PROXY'),
-            'Perms' => $ALL_USERS,
-    		),
-		),
-    'smtp-gated' => array(
-        'SMTP_MODULES' => array(
-            'Name' => _MENU('SMTP PROXY'),
-            'Perms' => $ALL_USERS,
-    		),
-		),
-    'imspector' => array(
-        'IM_MODULES' => array(
-            'Name' => _MENU('IM PROXY'),
             'Perms' => $ALL_USERS,
     		),
 		),
@@ -175,12 +151,6 @@ $CW_MODULES = array(
     'dante' => array(
         'SOCKS_MODULES' => array(
             'Name' => _MENU('SOCKS PROXY'),
-            'Perms' => $ALL_USERS,
-    		),
-		),
-    'spamd' => array(
-        'SPAMD_MODULES' => array(
-            'Name' => _MENU('SPAMD'),
             'Perms' => $ALL_USERS,
     		),
 		),
@@ -284,8 +254,8 @@ $PF_MODULES = array(
         'Perms' => $ALL_USERS,
 		),
 );
-/// DansGuardian Web Filter top menu.
-$DG_MODULES = array(
+/// E2Guardian Web Filter top menu.
+$E2_MODULES = array(
     'info.php' => array(
         'Name' => _MENU('Info'),
         'Perms' => $ALL_USERS,
@@ -323,52 +293,6 @@ $DG_MODULES = array(
         'Perms' => $ADMIN,
 		),
 );
-/// SpamAssassin top menu.
-$SPAMASSASSIN_MODULES = array(
-    'info.php' => array(
-        'Name' => _MENU('Info'),
-        'Perms' => $ALL_USERS,
-		),
-    'stats.php' => array(
-        'Name' => _MENU('Statistics'),
-        'Perms' => $ALL_USERS,
-		),
-    'graphs.php' => array(
-        'Name' => _MENU('Graphs'),
-        'Perms' => $ALL_USERS,
-		),
-    'logs.php' => array(
-        'Name' => _MENU('Logs'),
-        'Perms' => $ALL_USERS,
-		),
-    'conf.php' => array(
-        'Name' => _MENU('Config'),
-        'Perms' => $ADMIN,
-		),
-);
-/// Spamd top menu.
-$SPAMD_MODULES = array(
-    'info.php' => array(
-        'Name' => _MENU('Info'),
-        'Perms' => $ALL_USERS,
-		),
-    'stats.php' => array(
-        'Name' => _MENU('Statistics'),
-        'Perms' => $ALL_USERS,
-		),
-    'graphs.php' => array(
-        'Name' => _MENU('Graphs'),
-        'Perms' => $ALL_USERS,
-		),
-    'logs.php' => array(
-        'Name' => _MENU('Logs'),
-        'Perms' => $ALL_USERS,
-		),
-    'database.php' => array(
-        'Name' => _MENU('Spamd DB'),
-        'Perms' => $ALL_USERS,
-		),
-);
 /// ClamAV top menu.
 $VIRUS_MODULES = array(
     'info.php' => array(
@@ -385,52 +309,6 @@ $VIRUS_MODULES = array(
 		),
     'freshclamlogs.php' => array(
         'Name' => _MENU('DB Logs'),
-        'Perms' => $ALL_USERS,
-		),
-    'conf.php' => array(
-        'Name' => _MENU('Config'),
-        'Perms' => $ADMIN,
-		),
-);
-/// POP3 proxy top menu.
-$POP3_MODULES = array(
-    'info.php' => array(
-        'Name' => _MENU('Info'),
-        'Perms' => $ALL_USERS,
-		),
-    'stats.php' => array(
-        'Name' => _MENU('Statistics'),
-        'Perms' => $ALL_USERS,
-		),
-    'graphs.php' => array(
-        'Name' => _MENU('Graphs'),
-        'Perms' => $ALL_USERS,
-		),
-    'logs.php' => array(
-        'Name' => _MENU('Logs'),
-        'Perms' => $ALL_USERS,
-		),
-    'conf.php' => array(
-        'Name' => _MENU('Config'),
-        'Perms' => $ADMIN,
-		),
-);
-/// SMTP proxy top menu.
-$SMTP_MODULES = array(
-    'info.php' => array(
-        'Name' => _MENU('Info'),
-        'Perms' => $ALL_USERS,
-		),
-    'stats.php' => array(
-        'Name' => _MENU('Statistics'),
-        'Perms' => $ALL_USERS,
-		),
-    'graphs.php' => array(
-        'Name' => _MENU('Graphs'),
-        'Perms' => $ALL_USERS,
-		),
-    'logs.php' => array(
-        'Name' => _MENU('Logs'),
         'Perms' => $ALL_USERS,
 		),
     'conf.php' => array(
@@ -578,29 +456,6 @@ $FTP_MODULES = array(
     'logs.php' => array(
         'Name' => _MENU('Logs'),
         'Perms' => $ALL_USERS,
-		),
-);
-/// IMSpector IM proxy top menu.
-$IM_MODULES = array(
-    'info.php' => array(
-        'Name' => _MENU('Info'),
-        'Perms' => $ALL_USERS,
-		),
-    'graphs.php' => array(
-        'Name' => _MENU('Graphs'),
-        'Perms' => $ALL_USERS,
-		),
-    'imlogs.php' => array(
-        'Name' => _MENU('IM Logs'),
-        'Perms' => $ALL_USERS,
-		),
-    'logs.php' => array(
-        'Name' => _MENU('IM Proxy Logs'),
-        'Perms' => $ALL_USERS,
-		),
-    'conf.php' => array(
-        'Name' => _MENU('Config'),
-        'Perms' => $ADMIN,
 		),
 );
 /// DNS server top menu.

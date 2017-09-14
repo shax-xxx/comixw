@@ -166,21 +166,17 @@ $TCPDUMP= '/usr/sbin/tcpdump -nettt -r';
 /// Models to get statuses
 $ModelsToStat= array(
 	'pf',
-	'dansguardian',
+	'e2guardian',
 	'squid',
 	'snort',
 	'snortips',
-	'spamassassin',
 	'clamav',
-	'p3scan',
-	'smtp-gated',
 	'dhcpd',
 	'named',
 	'openvpn',
 	'openssh',
 	'ftp-proxy',
 	'dante',
-	'spamd',
 	'apache',
 	'monitoring',
 	);

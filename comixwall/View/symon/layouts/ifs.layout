@@ -3,10 +3,10 @@
 # Layout to show pf usage
 
 group   name="Internal Interface";
-graph   rrdfile=/var/www/htdocs/comixwall/View/symon/rrds/localhost/if_lan0.rrd, title="Internal Interface (lan0)";
+graph   rrdfile=/var/www/htdocs/comixwall/View/symon/rrds/localhost/if_em0.rrd, title="Internal Interface (em0)";
 
 group   name="External Interface";
-graph   rrdfile=/var/www/htdocs/comixwall/View/symon/rrds/localhost/if_wan0.rrd, title="External Interface (wan0)";
+graph   rrdfile=/var/www/htdocs/comixwall/View/symon/rrds/localhost/if_em1.rrd, title="External Interface (em1)";
 
 group   name="Loopback Interface";
 graph   rrdfile=/var/www/htdocs/comixwall/View/symon/rrds/localhost/if_lo0.rrd, title="Loopback Interface";

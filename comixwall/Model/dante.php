@@ -42,7 +42,7 @@ require_once($MODEL_PATH.'model.php');
 class Dante extends Model
 {
 	public $Name= 'dante';
-	public $User= '_dante';
+	public $User= '_sockd';
 	
 	public $ConfFile= '/etc/sockd.conf';
 	public $LogFile= '/var/log/sockd.log';

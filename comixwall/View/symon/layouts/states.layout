@@ -39,8 +39,8 @@ GPRINT:ss:LAST:%6.2lf\n
 ';
 
 group	name="State Searches vs Packets", pf_rrd=/var/www/htdocs/comixwall/View/symon/rrds/localhost/pf.rrd,
-		   lan_rrd=/var/www/htdocs/comixwall/View/symon/rrds/localhost/if_lan0.rrd,
-		   wan_rrd=/var/www/htdocs/comixwall/View/symon/rrds/localhost/if_wan0.rrd,
+		   lan_rrd=/var/www/htdocs/comixwall/View/symon/rrds/localhost/if_em0.rrd,
+		   wan_rrd=/var/www/htdocs/comixwall/View/symon/rrds/localhost/if_em1.rrd,
 		   lo_rrd=/var/www/htdocs/comixwall/View/symon/rrds/localhost/if_lo0.rrd;
 
 # State searches + how many packets from which interfaces

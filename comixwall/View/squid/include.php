@@ -51,17 +51,9 @@ class Squid extends View
 				'title' => _TITLE2('No cache'),
 				'info' => _HELPBOX2('Enable ComixWall as a non-caching proxy for the local network.'),
 				),
-			'log_ip_on_direct' => array(
-				'title' => _TITLE2('Log ip on direct'),
-				'info' => _HELPBOX2('Log the destination IP address in the hierarchy log tag when going direct. Earlier Squid versions logged the hostname here. If you prefer the old way set this to off.'),
-				),
 			'debug_options' => array(
 				'title' => _TITLE2('Debug options'),
 				'info' => _HELPBOX2('Logging options are set as section,level where each source file is assigned a unique section.  Lower levels result in less output,  Full debugging (level 9) can result in a very large log file, so be careful.  The magic word "ALL" sets debugging levels for all sections.  We recommend normally running with "ALL,1".'),
-				),
-			'log_fqdn' => array(
-				'title' => _TITLE2('Log fqdn'),
-				'info' => _HELPBOX2('Turn this on if you wish to log fully qualified domain names in the access.log. To do this Squid does a DNS lookup of all IP\'s connecting to it. This can (in some situations) increase latency, which makes your cache seem slower for interactive browsing.'),
 				),
 			'client_netmask' => array(
 				'title' => _TITLE2('Client netmask'),
