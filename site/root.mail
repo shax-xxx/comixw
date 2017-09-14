@@ -1,0 +1,60 @@
+From soner@comixwall.org Tue Dec  8 06:46:46 EET 2009
+Return-Path: root
+Date: Dec 8 06:46:46 EET 2009
+From: soner@comixwall.org (Soner Tari)
+To: root
+Subject: Welcome to ComixWall 4.6!
+
+This is the 7th public release of ComixWall ISG. ComixWall is still the only fully FOSS and freely available UTM firewall running on OpenBSD. You can use the web administration interface to configure and monitor your system and the network. Supported architectures are amd64 and i386 (ComixWall is one of the few UTM firewalls with 64-bit support).
+
+There are major changes in this version. Updated web user interface is the result of a 4+ months of intense refactoring and development effort. There are changes to other parts of the system too. The changes are too numerous to list here.
+
+The following are a few of the web user interface features:
+
+- Most system and service configuration can be achieved on the web interface, including pf rules.
+- System, network, and internal clients can be monitored via graphs.
+- Logs can be viewed and downloaded on the web interface. Compressed log files are supported.
+- Statistics collected over logs are displayed in bar charts and top lists. Statistics over compressed log files are supported.
+- Web interface provides many help boxes and windows, which can be disabled.
+- Man pages of OpenBSD and installed software can be accessed and searched on the web interface.
+- There are two users who can log in to the web interface. Unprivileged user does not have access rights to configuration pages, thus cannot interfere with system settings, and cannot even change user password (i.e. you can safely give the unprivileged user's password to your boss).
+- Web interface supports languages other than English: Turkish, Chinese, Dutch, Russian, French, Spanish.
+- Web interface configuration pages are designed so that changes you may have made to the configuration files on the command line (such as comments you might have added) remain intact after you configure a module using the web interface.
+
+ComixWall 4.6 includes all -stable patches to OpenBSD, as of December 1st.
+
+Here is the list of software installed by default:
+
+- OpenBSD/pf
+- OpenSSH
+- OpenBSD/ftp-proxy
+- OpenBSD/httpd: Apache web server
+- DNS server
+- DHCP server
+- DansGuardian 2.10.1.1: web filter, anti-virus using ClamAV 
+- Snort 2.8.5.1: intrusion detection system, with latest rules
+- SnortIPS 4.6: intrusion prevention system
+- ClamAV 0.95.3 with periodic virus signature updates
+- SpamAssassin 3.2.5: spam scanner
+- P3scan 2.3.2: anti-virus/anti-spam, transparent POP3 proxy
+- Smtp-gated 1.4.16.2: anti-virus/anti-spam, transparent SMTP proxy
+- Dante 1.2.0: SOCKS proxy
+- Squid 2.7.STABLE7: HTTP proxy
+- IMSpector 0.9: IM proxy which supports MSN, IRC, Yahoo, etc.
+- OpenVPN 2.1_rc22: virtual private networking
+- Symon 2.79: system monitoring via graphs
+- Pmacct 0.12.0rc3: network monitoring via graphs
+- PHP 5.2.11: free OOP scripting language
+
+Installation of ComixWall has been greatly improved in 4.6 too:
+
+- Thanks to a modified auto-partitioner of OpenBSD 4.6, the disk can be partitioned with a recommended layout for ComixWall, so most users don't need to use the label editor at all.
+- All install sets including siteXY.tgz are selected by default, so you cannot 'not' install ComixWall by mistake now.
+- OpenBSD installation questions are modified according to ComixWall needs. For example, X11 related questions are never asked.
+- ComixWall installer asks only 2 questions: internal/external interface and admin/user password. The rest of the configuration is handled automatically.
+- User can complete the installation by accepting the default answers (by just hitting ENTER) all the way from the beginning of the OpenBSD installation, with obvious exceptions being network configuration and passwords.
+
+I would like to thank all the seeders of the torrent downloads, and also those who contributed translations to the project.
+
+I enjoyed developing ComixWall, and hope you enjoy using it.
+

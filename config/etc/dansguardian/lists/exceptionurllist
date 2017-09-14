@@ -1,0 +1,86 @@
+# $ComixWall: exceptionurllist,v 1.4 2009/12/01 15:55:07 soner Exp $
+#URLs in exception list
+#Don't bother with the www. or
+#the http://
+#
+#These are parts of sites that filtering should
+#be switched off for.
+#
+#These should not be domains, i.e. entire sites,
+#they should be a domain with a path.
+#
+#For example 'foo.bar' is no good, you need
+#to just have 'foo.bar/porn/'.
+#
+#Another example:
+#generallybadsite.tld/partthatsok/
+
+#.Include</etc/dansguardian/lists/blacklists/abortion/urls>
+#.Include</etc/dansguardian/lists/blacklists/ads/urls>
+#.Include</etc/dansguardian/lists/blacklists/adult/urls>
+#.Include</etc/dansguardian/lists/blacklists/aggressive/urls>
+#.Include</etc/dansguardian/lists/blacklists/alcohol/urls>
+#.Include</etc/dansguardian/lists/blacklists/antispyware/urls>
+#.Include</etc/dansguardian/lists/blacklists/artnudes/urls>
+#.Include</etc/dansguardian/lists/blacklists/audio-video/urls>
+#.Include</etc/dansguardian/lists/blacklists/banking/urls>
+#.Include</etc/dansguardian/lists/blacklists/blog/urls>
+#.Include</etc/dansguardian/lists/blacklists/books/urls>
+#.Include</etc/dansguardian/lists/blacklists/celebrity/urls>
+#.Include</etc/dansguardian/lists/blacklists/chat/urls>
+#.Include</etc/dansguardian/lists/blacklists/child/urls>
+#.Include</etc/dansguardian/lists/blacklists/childcare/urls>
+#.Include</etc/dansguardian/lists/blacklists/contraception/urls>
+#.Include</etc/dansguardian/lists/blacklists/dating/urls>
+#.Include</etc/dansguardian/lists/blacklists/desktopsillies/urls>
+#.Include</etc/dansguardian/lists/blacklists/dialers/urls>
+#.Include</etc/dansguardian/lists/blacklists/drugs/urls>
+#.Include</etc/dansguardian/lists/blacklists/ecommerce/urls>
+#.Include</etc/dansguardian/lists/blacklists/entertainment/urls>
+#.Include</etc/dansguardian/lists/blacklists/filehosting/urls>
+#.Include</etc/dansguardian/lists/blacklists/filesharing/urls>
+#.Include</etc/dansguardian/lists/blacklists/frencheducation/urls>
+#.Include</etc/dansguardian/lists/blacklists/gambling/urls>
+#.Include</etc/dansguardian/lists/blacklists/games/urls>
+#.Include</etc/dansguardian/lists/blacklists/gardening/urls>
+#.Include</etc/dansguardian/lists/blacklists/government/urls>
+#.Include</etc/dansguardian/lists/blacklists/guns/urls>
+#.Include</etc/dansguardian/lists/blacklists/hacking/urls>
+#.Include</etc/dansguardian/lists/blacklists/homerepair/urls>
+#.Include</etc/dansguardian/lists/blacklists/humor/urls>
+#.Include</etc/dansguardian/lists/blacklists/hunting/urls>
+#.Include</etc/dansguardian/lists/blacklists/instantmessaging/urls>
+#.Include</etc/dansguardian/lists/blacklists/jobsearch/urls>
+#.Include</etc/dansguardian/lists/blacklists/kidstimewasting/urls>
+#.Include</etc/dansguardian/lists/blacklists/magazines/urls>
+#.Include</etc/dansguardian/lists/blacklists/mail/urls>
+#.Include</etc/dansguardian/lists/blacklists/malware/urls>
+#.Include</etc/dansguardian/lists/blacklists/manga/urls>
+#.Include</etc/dansguardian/lists/blacklists/medical/urls>
+#.Include</etc/dansguardian/lists/blacklists/mixed_adult/urls>
+#.Include</etc/dansguardian/lists/blacklists/naturism/urls>
+#.Include</etc/dansguardian/lists/blacklists/news/urls>
+#.Include</etc/dansguardian/lists/blacklists/onlineauctions/urls>
+#.Include</etc/dansguardian/lists/blacklists/onlinegames/urls>
+#.Include</etc/dansguardian/lists/blacklists/personalfinance/urls>
+#.Include</etc/dansguardian/lists/blacklists/pets/urls>
+#.Include</etc/dansguardian/lists/blacklists/phishing/urls>
+#.Include</etc/dansguardian/lists/blacklists/porn/urls>
+#.Include</etc/dansguardian/lists/blacklists/proxy/urls>
+#.Include</etc/dansguardian/lists/blacklists/radio/urls>
+#.Include</etc/dansguardian/lists/blacklists/religion/urls>
+#.Include</etc/dansguardian/lists/blacklists/sexuality/urls>
+#.Include</etc/dansguardian/lists/blacklists/socialnetworking/urls>
+#.Include</etc/dansguardian/lists/blacklists/sportnews/urls>
+#.Include</etc/dansguardian/lists/blacklists/sports/urls>
+#.Include</etc/dansguardian/lists/blacklists/tobacco/urls>
+#.Include</etc/dansguardian/lists/blacklists/updatesites/urls>
+#.Include</etc/dansguardian/lists/blacklists/vacation/urls>
+#.Include</etc/dansguardian/lists/blacklists/violence/urls>
+#.Include</etc/dansguardian/lists/blacklists/virusinfected/urls>
+#.Include</etc/dansguardian/lists/blacklists/warez/urls>
+#.Include</etc/dansguardian/lists/blacklists/weapons/urls>
+#.Include</etc/dansguardian/lists/blacklists/weather/urls>
+#.Include</etc/dansguardian/lists/blacklists/webmail/urls>
+.Include</etc/dansguardian/lists/blacklists/whitelist/urls>
+

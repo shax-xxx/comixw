@@ -1,0 +1,6 @@
+<area shape="rect" href="$classDhcpd.html#392f0e213b794f59c9c06b0614b16f16" title="Deletes a dhcpd interface." alt="" coords="160,31,261,57">
+<area shape="rect" href="$classDhcpd.html#5515c62cf7192cd30ed2bf6abd05cf1c" title="Provides the list of dhcpd interfaces." alt="" coords="311,5,420,32">
+<area shape="rect" href="$classDhcpd.html#6af5976da0f892e3f73a5482c3a3d366" title="Sets ifs." alt="" coords="311,68,420,95">
+<area shape="rect" href="$classModel.html#f2576452d0c09887bf098e304ab6d3e1" title="Searches a given file with a given regexp." alt="" coords="487,5,620,32">
+<area shape="rect" href="$classModel.html#3a3a50b49511d0d5f4373a15c83f60a8" title="Search and replace." alt="" coords="469,68,637,95">
+<area shape="rect" href="$Controller_2lib_8php.html#452de2ffc796752557de0932efe45dab" title="Wrapper for controller error logging via syslog." alt="" coords="687,68,777,95">

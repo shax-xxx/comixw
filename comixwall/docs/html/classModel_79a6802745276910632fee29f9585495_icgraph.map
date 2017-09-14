@@ -1,0 +1,16 @@
+<area shape="rect" href="$classImspector.html#c664c9de3146d555dd246704dbbdd125" title="Imspector::GetBadwords" alt="" coords="177,31,359,57">
+<area shape="rect" href="$classSystem.html#d97ce4436a87b24f0704eb6453963a8f" title="System::GetIfConfig" alt="" coords="191,208,345,235">
+<area shape="rect" href="$classSnortips.html#ca6dd5c39a222c982d55a9786b4068c1" title="Snortips::GetInfo" alt="" coords="203,259,333,285">
+<area shape="rect" href="$classSystem.html#b3e47a6e476aeb2c7ab65d1396aa9956" title="Reads hostname." alt="" coords="187,107,349,133">
+<area shape="rect" href="$classModel.html#71879d121d5eb29eefaca11136b08239" title="Gets saved statistics for the given log file." alt="" coords="184,360,352,387">
+<area shape="rect" href="$classSystem.html#a3dfbc82601ff46ec77ed546f093e23a" title="Reads gateway address." alt="" coords="168,157,368,184">
+<area shape="rect" href="$classPmacct.html#fef0c6ec06230e6e0a2ee6b7454b01b0" title="Start module process(es)." alt="" coords="212,411,324,437">
+<area shape="rect" href="$classImspector.html#da969b4f04feb17cc45173029137042b" title="Imspector::Imspector" alt="" coords="445,5,605,32">
+<area shape="rect" href="$classSystem.html#7522fb69a5b43f9536c94a7a0e952dd7" title="System::GetConfig" alt="" coords="452,157,599,184">
+<area shape="rect" href="$classSystem.html#e317936c9bcf1374d61745572e0f2f8a" title="System::System" alt="" coords="683,132,813,159">
+<area shape="rect" href="$classSnortips.html#167a35c683c8aaaf244b488ead4e3a3d" title="Displays a list of blocked, blacklisted, or whitelisted IPs." alt="" coords="417,259,633,285">
+<area shape="rect" href="$classSnortips.html#1f1eb35f976124f24754d74193dd1c44" title="Snortips::Snortips" alt="" coords="457,309,593,336">
+<area shape="rect" href="$classModel.html#a2edac23e52476f8e5c70d9893bc1fcb" title="Returns both brief and full statistics." alt="" coords="861,461,1003,488">
+<area shape="rect" href="$classModel.html#ffd6bba4698ad739939497598cadde66" title="Main statistics collector, as module data set." alt="" coords="685,411,811,437">
+<area shape="rect" href="$classModel.html#2de95faa4fc211f54fcc882609ca4d7f" title="Updates statistics incrementally, both brief and full." alt="" coords="451,411,600,437">
+<area shape="rect" href="$classModel.html#e3b375de5f6df4faf74a95d64748e048" title="Model::Model" alt="" coords="1051,436,1157,463">

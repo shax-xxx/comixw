@@ -1,0 +1,4 @@
+<area shape="rect" href="$classModel.html#26aeff109e6dbc24a2f7053966132b23" title="Returns configuration file of the module." alt="" coords="259,5,403,32">
+<area shape="rect" href="$classModel.html#fe2fc7ef7e2b7d0d373bbd2ecb9fc89f" title="Checks if commented&#45;out Name exists." alt="" coords="237,56,424,83">
+<area shape="rect" href="$classModel.html#651763904d218ee52464b258498c0255" title="Reads value of commented&#45;out NVP." alt="" coords="243,107,419,133">
+<area shape="rect" href="$classModel.html#f2576452d0c09887bf098e304ab6d3e1" title="Searches a given file with a given regexp." alt="" coords="473,81,607,108">

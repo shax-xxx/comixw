@@ -1,0 +1,99 @@
+# $ComixWall: comixwall_NOTICE.po,v 1.4 2009/11/26 07:49:14 soner Exp $
+# Copyright (C) 2009 Soner Tari, The ComixWall ISG project
+# This file is distributed under the same license as ComixWall.
+# Soner Tari <soner@comixwall.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: ComixWall 4.6\n"
+"Report-Msgid-Bugs-To: soner@comixwall.org\n"
+"POT-Creation-Date: 2009-11-11 16:21+0200\n"
+"PO-Revision-Date: 2009-11-15 19:20+0200\n"
+"Last-Translator: Soner Tari <soner@comixwall.org>\n"
+"Language-Team: Turkish <misc@comixwall.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid ""
+"Analysis of statistical data may take a long time to process. Please be "
+"patient. Also note that if you refresh this page frequently, CPU load may "
+"increase considerably."
+msgstr ""
+"İstatistik verilerinin analizi uzun zaman alabilir. Lütfen sabırlı olun. "
+"Ayrıca, bu sayfayı sık yenilerseniz işlemci yükü fazlasıyla artabilir."
+
+msgid "Are you sure you want to create a new group?"
+msgstr "Yeni bir grup yaratmak istediğinizden emin misiniz?"
+
+msgid "Are you sure you want to delete the configuration?"
+msgstr "Yapılandırmayı silmek istediğinizden emin misiniz?"
+
+msgid "Are you sure you want to delete the selected items?"
+msgstr "Seçili öğeleri silmek istediğinizden emin misiniz?"
+
+msgid "Are you sure you want to disable Packet Filter?"
+msgstr "Paket Eleğini kapatmak istediğinizden emin misiniz?"
+
+msgid "Are you sure you want to erase statistics files?"
+msgstr "İstatistik dosyalarını silmek istediğinizden emin misiniz?"
+
+msgid "Are you sure you want to reinitialize graph files?"
+msgstr "Grafik dosyalarını sıfırlamak istediğinizden emin misiniz?"
+
+msgid "Are you sure you want to restart the <NAME>?"
+msgstr "<NAME>: tekrar başlatmak istediğinizden emin misiniz?"
+
+msgid "Are you sure you want to restart the network?"
+msgstr "Ağı tekrar başlatmak istediğinizden emin misiniz?"
+
+msgid "Are you sure you want to rotate the logs?"
+msgstr "Kayıtları döndürmek istediğinizden emin misiniz?"
+
+msgid "Are you sure you want to set the date?"
+msgstr "Tarihi ayarlamak istediğinizden emin misiniz?"
+
+msgid "Are you sure you want to start the <NAME>?"
+msgstr "<NAME>: başlatmak istediğinizden emin misiniz?"
+
+msgid "Are you sure you want to stop the <NAME>?"
+msgstr "<NAME>: durdurmak istediğinizden emin misiniz?"
+
+msgid ""
+"Automatic configuration completed. You might want to check the details now."
+msgstr ""
+"Otomatik yapılandırma tamamlandı. Şimdi detayları kontrol edebilirsiniz."
+
+msgid "Automatic configuration failed."
+msgstr "Otomatik yapılandırma başarısız oldu."
+
+msgid "ComixWall currently supports only admin and user usernames"
+msgstr "ComixWall sadece admin ve user kullanıcı adlarını destekler."
+
+msgid "FAILED"
+msgstr "BAŞARISIZ"
+
+msgid "Filter group not found"
+msgstr "Elek grubu bulunamadı"
+
+msgid "Not a valid password"
+msgstr "Geçerli bir şifre değil"
+
+msgid "Page start line"
+msgstr "Sayfa başlangıç satırı"
+
+msgid "Passwords do not match"
+msgstr "Şifreler uyuşmuyor"
+
+msgid "System is going down..."
+msgstr "Sistem kapatılıyor..."
+
+msgid "System is restarting..."
+msgstr "Sistem tekrar başlıyor..."
+
+msgid "You should select at least one conf file to start the process"
+msgstr "Süreci başlatmak için en az bir conf dosyası seçmelisiniz"
+
+msgid "You should select at least one interface to start IDS for"
+msgstr "STS'yi başlatmak için en az bir ağ arayüzü seçmelisiniz"

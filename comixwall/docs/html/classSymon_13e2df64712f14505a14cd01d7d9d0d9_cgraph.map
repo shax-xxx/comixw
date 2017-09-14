@@ -1,0 +1,8 @@
+<area shape="rect" href="$classSymon.html#8c5b917432c834c728a4fb99bfe4eb0d" title="Symon::SetConf" alt="" coords="191,5,321,32">
+<area shape="rect" href="$classSymon.html#137b0807afc7a48b6997dd2584cc6b2b" title="Symon::SetCpus" alt="" coords="191,56,321,83">
+<area shape="rect" href="$classSymon.html#24fd9df72e6d3639952ecc6431deb885" title="Symon::SetIfs" alt="" coords="199,107,313,133">
+<area shape="rect" href="$classSymon.html#59dc39aaa2c1aa06baf10df25b745f52" title="Symon::SetPartitions" alt="" coords="176,157,336,184">
+<area shape="rect" href="$classSymon.html#a58225331f2c8d35dbf4fbf949a3fa8e" title="Symon::SetSensors" alt="" coords="181,208,331,235">
+<area shape="rect" href="$classModel.html#0ae50b6dbbd53cc2db879f2aad4a6bb3" title="Gets sysctl output for the given arg." alt="" coords="401,31,535,57">
+<area shape="rect" href="$classModel.html#3a3a50b49511d0d5f4373a15c83f60a8" title="Search and replace." alt="" coords="384,81,552,108">
+<area shape="rect" href="$Controller_2lib_8php.html#452de2ffc796752557de0932efe45dab" title="Wrapper for controller error logging via syslog." alt="" coords="601,81,692,108">

@@ -1,0 +1,326 @@
+# $ComixWall: comixwall_TITLE.po,v 1.6 2009/12/01 14:59:41 soner Exp $
+# Copyright (C) 2009 Soner Tari, The ComixWall ISG project
+# This file is distributed under the same license as ComixWall.
+# Soner Tari <soner@comixwall.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: ComixWall 4.6\n"
+"Report-Msgid-Bugs-To: soner@comixwall.org\n"
+"POT-Creation-Date: 2009-11-11 16:21+0200\n"
+"PO-Revision-Date: 2009-12-01 16:28+0200\n"
+"Last-Translator: Soner Tari <soner@comixwall.org>\n"
+"Language-Team: Turkish <misc@comixwall.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "1 minute average"
+msgstr "1 dakikalık ortalama"
+
+msgid "15 minute average"
+msgstr "15 dakikalık ortalama"
+
+msgid "5 minute average"
+msgstr "5 dakikalık ortalama"
+
+msgid "Admin e-mail"
+msgstr "Yönetici e-posta adresi"
+
+msgid "Archives"
+msgstr "Arşivler"
+
+msgid "Automatic config"
+msgstr "Otomatik yapılandırma"
+
+msgid "Business Days"
+msgstr "İş günleri"
+
+msgid "Business Hours"
+msgstr "İş saatleri"
+
+msgid "CPU Load"
+msgstr "İşlemci Yükü"
+
+msgid "CPUs"
+msgstr "İşlemciler"
+
+msgid "Count"
+msgstr "Sayı"
+
+msgid "Data Transfer"
+msgstr "Veri Aktarımı"
+
+msgid "Date"
+msgstr "Tarih"
+
+msgid "DateTime"
+msgstr "TarihSaat"
+
+msgid "Day"
+msgstr "Gün"
+
+msgid "Disabled Services"
+msgstr "Kapalı Servisler"
+
+msgid "Disk I/O"
+msgstr "Disk Yazma/Okuma"
+
+msgid "Disks"
+msgstr "Diskler"
+
+msgid "ERROR"
+msgstr "HATA"
+
+msgid "Enabled Services"
+msgstr "Açık Servisler"
+
+msgid "External Interface"
+msgstr "Dış Arayüz"
+
+msgid "External interface"
+msgstr "Dış arayüz"
+
+msgid "Fan"
+msgstr "Fan"
+
+msgid "File"
+msgstr "Dosya"
+
+msgid "From"
+msgstr "Başlangıç"
+
+msgid "Gateway"
+msgstr "Ağ geçidi"
+
+msgid "Graph files"
+msgstr "Grafik dosyaları"
+
+msgid "Group"
+msgstr "Grup"
+
+msgid "Help boxes"
+msgstr "Yardım kutuları"
+
+msgid "Holidays"
+msgstr "Tatiller"
+
+msgid "Horizontal"
+msgstr "Yatay"
+
+msgid "Hostname"
+msgstr "Sistem Adı"
+
+msgid "Hosts"
+msgstr "Bilgisayarlar"
+
+msgid "Hour"
+msgstr "Saat"
+
+msgid "Hourly"
+msgstr "Saatlik"
+
+msgid "INFORMATION"
+msgstr "BİLGİ"
+
+msgid "IP Forwarding"
+msgstr "IP Yönlendirme"
+
+msgid "Interface"
+msgstr "Arayüz"
+
+msgid "Internal Interface"
+msgstr "İç Arayüz"
+
+msgid "Internal interface"
+msgstr "İç arayüz"
+
+msgid "Language"
+msgstr "Dil"
+
+msgid "Level"
+msgstr "Seviye"
+
+msgid "Line"
+msgstr "Satır"
+
+msgid "Lines per page"
+msgstr "Satır sayısı"
+
+msgid "Log"
+msgstr "Kayıt"
+
+msgid "Log level"
+msgstr "Kayıt seviyesi"
+
+msgid "Logout"
+msgstr "Çıkış"
+
+msgid "Logs"
+msgstr "Kayıtlar"
+
+msgid "Loopback Interface"
+msgstr "Yerel Arayüz"
+
+msgid "Machine"
+msgstr "Makina"
+
+msgid "Mbuf Statistics"
+msgstr "Mbuf İstatistikleri"
+
+msgid "Memory Usage"
+msgstr "Bellek Kullanımı"
+
+msgid "Month"
+msgstr "Ay"
+
+msgid "Motherboard"
+msgstr "Anakart"
+
+msgid "Nameserver"
+msgstr "Ad sunucu"
+
+msgid "Network Protocol Usage"
+msgstr "Ağ Protokol Kullanımı"
+
+msgid "Number of Processes"
+msgstr "Süreç Sayısı"
+
+msgid "Number of processes"
+msgstr "Süreç sayısı"
+
+msgid "Operating System"
+msgstr "İşletim Sistemi"
+
+msgid "Partitions"
+msgstr "Disk Bölümleri"
+
+msgid "Partitions Usages"
+msgstr "Disk Bölüm Kullanımları"
+
+msgid "Password"
+msgstr "Şifre"
+
+msgid "Password again"
+msgstr "Tekrar şifre"
+
+msgid "Physical Memory"
+msgstr "Fiziksel Bellek"
+
+msgid "Privileged IPs"
+msgstr "Öncelikli IP'ler"
+
+msgid "Process"
+msgstr "Süreç"
+
+msgid "Process CPU Load"
+msgstr "Süreç İşlemci Yükü"
+
+msgid "Processor"
+msgstr "İşlemci"
+
+msgid "Refresh interval"
+msgstr "Yenileme aralığı"
+
+msgid "Regexp"
+msgstr "Düzenli ifade"
+
+msgid "Reload interval"
+msgstr "Yükleme aralığı"
+
+msgid "Restart network"
+msgstr "Ağı tekrar başlat"
+
+msgid "Restricted IPs"
+msgstr "Sınırlı IP'ler"
+
+msgid "Rotate all log files"
+msgstr "Tüm kayıt dosyalarını döndür"
+
+msgid "Rule"
+msgstr "Kural"
+
+msgid "Search site"
+msgstr "Site ara"
+
+msgid "Secure Level"
+msgstr "Güvenlik Seviyesi"
+
+msgid "Selected"
+msgstr "Seçili"
+
+msgid "Serial Number"
+msgstr "Seri Numarası"
+
+msgid "Session timeout"
+msgstr "Oturum zaman aşımı"
+
+msgid "Size"
+msgstr "Boyut"
+
+msgid "Size (KB)"
+msgstr "Boyut (KB)"
+
+msgid "Software Version"
+msgstr "Yazılım Sürümü"
+
+msgid "State Searches vs Packets"
+msgstr "Durum Aramaları ve Paketler"
+
+msgid "State Statistics"
+msgstr "Durum İstatistikleri"
+
+msgid "Statistics and uncompressed log files"
+msgstr "İstatistik ve açılmış kayıt dosyaları"
+
+msgid "System"
+msgstr "Sistem"
+
+msgid "Target"
+msgstr "Hedef"
+
+msgid "Temperature"
+msgstr "Sıcaklık"
+
+msgid "Time"
+msgstr "Saat"
+
+msgid "Time server"
+msgstr "Zaman sunucu"
+
+msgid "To"
+msgstr "Bitiş"
+
+msgid "Uptime"
+msgstr "Çalışma Süresi"
+
+msgid "User"
+msgstr "Kullanıcı"
+
+msgid "User name"
+msgstr "Kullanıcı adı"
+
+msgid "Version"
+msgstr "Sürüm"
+
+msgid "WARNING"
+msgstr "UYARI"
+
+msgid "When (h)"
+msgstr "Zaman (saat)"
+
+msgid "disabled"
+msgstr "kapalı"
+
+msgid "enabled"
+msgstr "açık"
+
+msgid "is not running"
+msgstr "çalışmıyor"
+
+msgid "is running"
+msgstr "çalışıyor"
+
+msgid "secs"
+msgstr "sn"

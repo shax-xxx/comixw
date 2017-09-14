@@ -1,0 +1,4 @@
+<area shape="rect" href="$Controller_2lib_8php.html#452de2ffc796752557de0932efe45dab" title="Wrapper for controller error logging via syslog." alt="" coords="196,5,287,32">
+<area shape="rect" href="$classSnort.html#ed8ca7ddca8b8ffa4cb43ed7e6965bb9" title="Checks if the process(es) is running." alt="" coords="151,56,332,83">
+<area shape="rect" href="$classModel.html#2d12753c999aac330108a00dd0f3abec" title="Runs given shell command and returns its output as string." alt="" coords="383,81,575,108">
+<area shape="rect" href="$lib_2lib_8php.html#bdb713d167f78cb17af6cbe7d651270b" title="Sets or updates $ViewError with the given message." alt="" coords="199,157,284,184">

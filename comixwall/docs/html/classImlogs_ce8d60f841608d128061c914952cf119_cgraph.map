@@ -1,0 +1,9 @@
+<area shape="rect" href="$classImlogs.html#69050f33a33344a0da3e5153c8133559" title="Imlogs::GetImLogFile" alt="" coords="183,5,340,32">
+<area shape="rect" href="$classImlogs.html#ff0360629aa1dd4aae74fe138de96ec7" title="Imlogs::GetLocalUsers" alt="" coords="179,56,344,83">
+<area shape="rect" href="$classImlogs.html#272093bca964d79288c5df8d72bfd00c" title="Imlogs::GetProtocols" alt="" coords="184,107,339,133">
+<area shape="rect" href="$classImlogs.html#93fa56fad0b9cdd789acc6d03465d2a7" title="Imlogs::GetRemoteUsers" alt="" coords="169,157,353,184">
+<area shape="rect" href="$classImlogs.html#e05933567c841d3645dee22bf6b94c49" title="Imlogs::GetSessions" alt="" coords="185,208,337,235">
+<area shape="rect" href="$classImlogs.html#acfcae31f544dd5dfaee9051c143b776" title="Imlogs::GetDirs" alt="" coords="413,120,533,147">
+<area shape="rect" href="$classModel.html#55b3f40ec612727a645a77896163f1d9" title="Returns files with the given filepath pattern." alt="" coords="592,152,712,179">
+<area shape="rect" href="$classModel.html#2d12753c999aac330108a00dd0f3abec" title="Runs given shell command and returns its output as string." alt="" coords="761,152,953,179">
+<area shape="rect" href="$classImlogs.html#ae92041ddad8fdfd81efe7eff79091c5" title="Imlogs::ImGetFiles" alt="" coords="403,183,544,209">

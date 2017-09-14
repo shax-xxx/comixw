@@ -1,0 +1,29 @@
+<area shape="rect" href="$Installer_2lib_8php.html#62f814c225795441b5db9017327bd5be" title="Apply configuration." alt="" coords="191,107,289,133">
+<area shape="rect" href="$libauth_8php.html#39e67ed09e2f5c52b7ce7f43a106eaf4" title="Authenticates session user with the password supplied." alt="" coords="439,5,553,32">
+<area shape="rect" href="$libwui_8php.html#61080259ed9b1aea462f7fdf5f9554b1" title="Checks and prints a warning if the page is not active." alt="" coords="161,208,319,235">
+<area shape="rect" href="$Installer_2lib_8php.html#be52caae2e1a4d1605974ef08ee685ea" title="Initializes interfaces." alt="" coords="212,259,268,285">
+<area shape="rect" href="$libauth_8php.html#3a0842bf70e983a2db32053dcd7f07a5" title="Logs user out by setting session USER var to loggedout." alt="" coords="191,309,289,336">
+<area shape="rect" href="$libwui_8php.html#1e8e7f02df5569c0b6fadbeb4cffb0bc" title="Prints the message in a simple box, without an image." alt="" coords="187,512,293,539">
+<area shape="rect" href="$libauth_8php.html#edf527ce631be6f841d63bc1b01a6c35" title="Sets session submenu variable." alt="" coords="187,563,293,589">
+<area shape="rect" href="$Installer_2lib_8php.html#cdfee5e6b7b305c2eb4073522bd58c00" title="Sets both admin and user passwords on the WUI." alt="" coords="183,613,297,640">
+<area shape="rect" href="$libwui_8php.html#b4ab25818ee743c9099d18ecaa015276" title="Common HTML Header lines." alt="" coords="428,56,564,83">
+<area shape="rect" href="$conf_8acl_8php.html#a7b564aa9840c278df8b2de6c8c8bebf" title="Displays Access Control List." alt="" coords="444,107,548,133">
+<area shape="rect" href="$pf_2conf_8php.html#c64f2c8fe09d16dede2fec25d5a66cbf" title="Prints After Hour modification form." alt="" coords="417,157,575,184">
+<area shape="rect" href="$openvpn_2conf_8php.html#9864560073834cffadf2b64c6e254982" title="Wrapper for ConfSelectForm()." alt="" coords="417,208,575,235">
+<area shape="rect" href="$openvpn_2info_8php.html#32f0a1c4a7fecce215a7adc2eccb56e3" title="Wrapper for ConfStartStopForm()." alt="" coords="405,259,587,285">
+<area shape="rect" href="$include_8freshclam_8php.html#26aaf9ad12cb3301e0b4018d0772f6fe" title="Prints database mirrors." alt="" coords="399,309,593,336">
+<area shape="rect" href="$system_2conf_8basic_8php.html#b3302a35af4868f1fc1ff6222f796d84" title="Displays a form to change system datetime." alt="" coords="421,360,571,387">
+<area shape="rect" href="$dhcpd_2conf_8php.html#2eea294566bdde7cf0a2e80b7b8c6eca" title="Displays a form to change the interface(s) DHCP server distributes IPs from." alt="" coords="403,411,589,437">
+<area shape="rect" href="$dhcpd_2conf_8php.html#37e99c4c5d101e3c7cff9650e914f1a3" title="Displays a form to change DHCP server dynamic options." alt="" coords="411,461,581,488">
+<area shape="rect" href="$dhcpd_2conf_8php.html#4a6333c62648873c6a94314cda235035" title="Displays a form to change DHCP server IP range." alt="" coords="391,512,601,539">
+<area shape="rect" href="$classDansguardian.html#4411714b4998992ac2314169e33623e4" title="Displays an edit box and a botton to change current group." alt="" coords="368,563,624,589">
+<area shape="rect" href="$conf_8net_8php.html#617ae963935c14fc2383a1192e78ea7d" title="Displays a list box with hosts file contents." alt="" coords="435,613,557,640">
+<area shape="rect" href="$snortips_2conf_8basic_8php.html#2804fe4224a831e4cffe3fdde77b4e78" title="Displays alert keywords." alt="" coords="421,664,571,691">
+<area shape="rect" href="$classSnortips.html#2c265808c25ba14dcca9fa9d86983127" title="Displays white or black listed IPs form." alt="" coords="393,715,599,741">
+<area shape="rect" href="$lib_2conf_8php.html#2ece31f37146fc34809ebf4f5a2f19f6" title="Displays an NVP configuration form, usually a textbox and buttons." alt="" coords="439,765,553,792">
+<area shape="rect" href="$pf_2conf_8php.html#aa1ff9edc68209ae01a6e1f531872a15" title="Displays privileged IPs form." alt="" coords="431,816,561,843">
+<area shape="rect" href="$lib_2conf_8php.html#45dc744c70d3f37f235fa734e4e15fc9" title="PrintReloadConfigForm" alt="" coords="409,867,583,893">
+<area shape="rect" href="$pf_2conf_8php.html#6b55979d5d21401a5cdab7181d2a8d61" title="Displays restricted IPs form." alt="" coords="411,917,581,944">
+<area shape="rect" href="$p3scan_2conf_8php.html#284e45b502b56966f8b7b02df09e1d67" title="Displays P3scan language file selector." alt="" coords="409,968,583,995">
+<area shape="rect" href="$View_2dansguardian_2blacklists_8php.html#5724a4c241a5ea29b506b5d7e1ebe9f3" title="Displays a form to search sites/urls in black lists." alt="" coords="387,1019,605,1045">
+<area shape="rect" href="$squid_2conf_8php.html#281fb19ce868352969bbab8f5990bb9e" title="Prints Squid interface change form as IP:Port and lets the user modify it." alt="" coords="415,1069,577,1096">

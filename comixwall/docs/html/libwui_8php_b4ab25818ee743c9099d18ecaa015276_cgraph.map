@@ -1,0 +1,4 @@
+<area shape="rect" href="$libauth_8php.html#8fbf157323c2ece72ed524b6b0be461e" title="HTML Header without authentication." alt="" coords="192,5,299,32">
+<area shape="rect" href="$libauth_8php.html#3a0842bf70e983a2db32053dcd7f07a5" title="Logs user out by setting session USER var to loggedout." alt="" coords="196,56,295,83">
+<area shape="rect" href="$lib_2lib_8php.html#2baad0127aa06d65c99f3531f7348e85" title="For classifying gettext strings into files." alt="" coords="365,5,435,32">
+<area shape="rect" href="$libauth_8php.html#d3e6fe9c6dffaa5acac66d77c38ea028" title="Wrapper for syslog()." alt="" coords="347,56,453,83">

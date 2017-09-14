@@ -1,0 +1,12 @@
+# $ComixWall: rc.conf.local,v 1.6 2009/10/26 00:06:51 soner Exp $
+pf=			# Packet filter / NAT
+pflogd_flags="-d 5"	# add more flags, ie. "-s 256"
+ntpd_flags=
+dhcpd_flags=
+named_flags=
+ftpproxy_flags="-vv -D6"
+httpd_flags="-u -DSSL"
+#spamd_flags=
+#spamd_grey=
+#spamlogd_flags="-i wan0"
+apmd_flags="-C"

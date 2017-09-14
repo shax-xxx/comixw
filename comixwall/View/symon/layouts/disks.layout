@@ -1,0 +1,4 @@
+# $ComixWall: disks.layout,v 1.2 2009/10/07 16:48:22 soner Exp $
+
+group	name="Disk I/O";
+graph	rrdfile=/var/www/htdocs/comixwall/View/symon/rrds/localhost/io_wd0.rrd, title="Disk wd0";

@@ -1,0 +1,21 @@
+<area shape="rect" href="$classApache.html#4f93f9a47b2a4bdca07820dbbfe7ea3a" title="Apache::Apache" alt="" coords="220,5,345,32">
+<area shape="rect" href="$classClamd.html#fff16097e843dc294bd397f563f978d3" title="Clamd::Clamd" alt="" coords="225,56,340,83">
+<area shape="rect" href="$classFreshclam.html#5fe5d724af1acf79174ba885d89b968f" title="Freshclam::Freshclam" alt="" coords="201,107,364,133">
+<area shape="rect" href="$classOpenssh.html#086f16c5c906013d4011ca028b02b32f" title="Openssh::Openssh" alt="" coords="212,157,353,184">
+<area shape="rect" href="$classP3scan.html#cdd09b6b8cbfff2d34a92ff5ebd782b2" title="P3scan::P3scan" alt="" coords="221,208,344,235">
+<area shape="rect" href="$conf_8acl_8php.html#a7b564aa9840c278df8b2de6c8c8bebf" title="Displays Access Control List." alt="" coords="231,259,335,285">
+<area shape="rect" href="$openvpn_2conf_8php.html#9864560073834cffadf2b64c6e254982" title="Wrapper for ConfSelectForm()." alt="" coords="204,309,361,336">
+<area shape="rect" href="$openvpn_2info_8php.html#32f0a1c4a7fecce215a7adc2eccb56e3" title="Wrapper for ConfStartStopForm()." alt="" coords="192,360,373,387">
+<area shape="rect" href="$include_8freshclam_8php.html#26aaf9ad12cb3301e0b4018d0772f6fe" title="Prints database mirrors." alt="" coords="185,411,380,437">
+<area shape="rect" href="$dhcpd_2conf_8php.html#2eea294566bdde7cf0a2e80b7b8c6eca" title="Displays a form to change the interface(s) DHCP server distributes IPs from." alt="" coords="189,461,376,488">
+<area shape="rect" href="$dhcpd_2conf_8php.html#37e99c4c5d101e3c7cff9650e914f1a3" title="Displays a form to change DHCP server dynamic options." alt="" coords="197,512,368,539">
+<area shape="rect" href="$dhcpd_2conf_8php.html#4a6333c62648873c6a94314cda235035" title="Displays a form to change DHCP server IP range." alt="" coords="177,563,388,589">
+<area shape="rect" href="$classDansguardian.html#4411714b4998992ac2314169e33623e4" title="Displays an edit box and a botton to change current group." alt="" coords="155,613,411,640">
+<area shape="rect" href="$snortips_2conf_8basic_8php.html#2804fe4224a831e4cffe3fdde77b4e78" title="Displays alert keywords." alt="" coords="208,664,357,691">
+<area shape="rect" href="$lib_2conf_8php.html#45dc744c70d3f37f235fa734e4e15fc9" title="PrintReloadConfigForm" alt="" coords="196,715,369,741">
+<area shape="rect" href="$p3scan_2conf_8php.html#284e45b502b56966f8b7b02df09e1d67" title="Displays P3scan language file selector." alt="" coords="196,765,369,792">
+<area shape="rect" href="$View_2dansguardian_2blacklists_8php.html#5724a4c241a5ea29b506b5d7e1ebe9f3" title="Displays a form to search sites/urls in black lists." alt="" coords="173,816,392,843">
+<area shape="rect" href="$squid_2conf_8php.html#281fb19ce868352969bbab8f5990bb9e" title="Prints Squid interface change form as IP:Port and lets the user modify it." alt="" coords="201,867,364,893">
+<area shape="rect" href="$classSnortips.html#1f1eb35f976124f24754d74193dd1c44" title="Snortips::Snortips" alt="" coords="215,917,351,944">
+<area shape="rect" href="$classSpamassassin.html#e361a31310cb48214c2c18dca8c5510e" title="Spamassassin::Spamassassin" alt="" coords="176,968,389,995">
+<area shape="rect" href="$classSquid.html#19165b349f0a1e77ed05b9e2ead005c5" title="Squid::Squid" alt="" coords="232,1019,333,1045">

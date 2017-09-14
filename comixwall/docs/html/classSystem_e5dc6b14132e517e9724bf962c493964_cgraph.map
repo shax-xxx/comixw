@@ -1,0 +1,4 @@
+<area shape="rect" href="$classSystem.html#65ca554d07ee4accae9b6c83f735550f" title="Gets the default gateway from routing table." alt="" coords="316,31,535,57">
+<area shape="rect" href="$classSystem.html#dc694e93280dcd02cd54c76efb690ad3" title="Sets system gateway." alt="" coords="348,81,503,108">
+<area shape="rect" href="$Controller_2lib_8php.html#452de2ffc796752557de0932efe45dab" title="Wrapper for controller error logging via syslog." alt="" coords="585,5,676,32">
+<area shape="rect" href="$lib_2lib_8php.html#bdb713d167f78cb17af6cbe7d651270b" title="Sets or updates $ViewError with the given message." alt="" coords="588,56,673,83">

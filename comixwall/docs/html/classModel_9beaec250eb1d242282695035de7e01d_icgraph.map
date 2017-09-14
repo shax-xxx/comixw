@@ -1,0 +1,11 @@
+<area shape="rect" href="$classImspector.html#60fbadb2da6ccde868e5af4e9b6b3c7f" title="Imspector::AddAcl" alt="" coords="232,5,371,32">
+<area shape="rect" href="$classImspector.html#33903adb8a755188d814506860428899" title="Imspector::AddBadword" alt="" coords="213,56,389,83">
+<area shape="rect" href="$classSystem.html#b056bd6c5c382a7c71bbf20c134e7965" title="Adds host line to hosts file." alt="" coords="233,107,369,133">
+<area shape="rect" href="$classDansguardian.html#8682b938e4d7c66e0e520af27110e1dc" title="Dansguardian::AddIp" alt="" coords="224,157,379,184">
+<area shape="rect" href="$classSnortips.html#a1a3dcf40c186e80f655b3e849204f79" title="Add a keyword." alt="" coords="219,309,384,336">
+<area shape="rect" href="$classDansguardian.html#d0ffa3b849c6ed659e93516d4a5bd2b5" title="Dansguardian::AddSiteList" alt="" coords="205,208,397,235">
+<area shape="rect" href="$classDansguardian.html#f91baae36b305f29c3d52a2c4d9820e0" title="Dansguardian::AddUrlList" alt="" coords="209,259,393,285">
+<area shape="rect" href="$classImspector.html#da969b4f04feb17cc45173029137042b" title="Imspector::Imspector" alt="" coords="469,31,629,57">
+<area shape="rect" href="$classSystem.html#e317936c9bcf1374d61745572e0f2f8a" title="System::System" alt="" coords="484,107,615,133">
+<area shape="rect" href="$classDansguardian.html#3223beac3b98c7358167ff9be1558e82" title="Dansguardian::Dansguardian" alt="" coords="445,208,653,235">
+<area shape="rect" href="$classSnortips.html#1f1eb35f976124f24754d74193dd1c44" title="Snortips::Snortips" alt="" coords="481,309,617,336">

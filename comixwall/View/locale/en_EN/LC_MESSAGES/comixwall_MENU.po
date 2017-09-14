@@ -1,0 +1,301 @@
+# $ComixWall: comixwall_MENU.po,v 1.2 2009/11/17 01:10:34 soner Exp $
+# Copyright (C) 2009 Soner Tari, The ComixWall ISG project
+# This file is distributed under the same license as ComixWall.
+msgid ""
+msgstr ""
+"Project-Id-Version: ComixWall 4.6\n"
+"Report-Msgid-Bugs-To: soner@comixwall.org\n"
+"POT-Creation-Date: 2009-11-11 16:21+0200\n"
+"PO-Revision-Date: 2009-11-11 16:24+0200\n"
+"Last-Translator: Soner Tari <soner@comixwall.org>\n"
+"Language-Team: LANGUAGE <misc@comixwall.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "ACL"
+msgstr ""
+
+msgid "Access Logs"
+msgstr ""
+
+msgid "Advanced"
+msgstr ""
+
+msgid "Alerts"
+msgstr ""
+
+msgid "Archives"
+msgstr ""
+
+msgid "Badwords"
+msgstr ""
+
+msgid "Basic"
+msgstr ""
+
+msgid "Blacklists"
+msgstr ""
+
+msgid "Blanket"
+msgstr ""
+
+msgid "Bypass"
+msgstr ""
+
+msgid "COMIXWALL ADMINISTRATION INTERFACE"
+msgstr ""
+
+msgid "CPUs"
+msgstr ""
+
+msgid "CWC Logs"
+msgstr ""
+
+msgid "Categories"
+msgstr ""
+
+msgid "Charts"
+msgstr ""
+
+msgid "Clamd"
+msgstr ""
+
+msgid "ComixWall Administration Interface"
+msgstr ""
+
+msgid "Config"
+msgstr ""
+
+msgid "Credits"
+msgstr ""
+
+msgid "DB"
+msgstr ""
+
+msgid "DB Logs"
+msgstr ""
+
+msgid "DHCP"
+msgstr ""
+
+msgid "DM Exts"
+msgstr ""
+
+msgid "DM Mimes"
+msgstr ""
+
+msgid "DNS"
+msgstr ""
+
+msgid "Daily"
+msgstr ""
+
+msgid "Disks"
+msgstr ""
+
+msgid "Domains"
+msgstr ""
+
+msgid "Downloads"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Extensions"
+msgstr ""
+
+msgid "FTP PROXY"
+msgstr ""
+
+msgid "Filter"
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "Graphs"
+msgstr ""
+
+msgid "Groups"
+msgstr ""
+
+msgid "HTTP PROXY"
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
+msgid "Hosts"
+msgstr ""
+
+msgid "Hourly"
+msgstr ""
+
+msgid "IDS"
+msgstr ""
+
+msgid "IM Logs"
+msgstr ""
+
+msgid "IM PROXY"
+msgstr ""
+
+msgid "IM Proxy Logs"
+msgstr ""
+
+msgid "INFORMATION"
+msgstr ""
+
+msgid "IPS"
+msgstr ""
+
+msgid "Info"
+msgstr ""
+
+msgid "Init"
+msgstr ""
+
+msgid "Interfaces"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Lists"
+msgstr ""
+
+msgid "Live"
+msgstr ""
+
+msgid "Logs"
+msgstr ""
+
+msgid "Logs Report"
+msgstr ""
+
+msgid "MONITORING"
+msgstr ""
+
+msgid "Managed"
+msgstr ""
+
+msgid "Mbufs"
+msgstr ""
+
+msgid "Memory"
+msgstr ""
+
+msgid "Mimes"
+msgstr ""
+
+msgid "Network"
+msgstr ""
+
+msgid "OPENSSH"
+msgstr ""
+
+msgid "OPENVPN"
+msgstr ""
+
+msgid "PACKET FILTER"
+msgstr ""
+
+msgid "POP3 PROXY"
+msgstr ""
+
+msgid "Partitions"
+msgstr ""
+
+msgid "Phrases"
+msgstr ""
+
+msgid "Processes"
+msgstr ""
+
+msgid "Protocols"
+msgstr ""
+
+msgid "Queues"
+msgstr ""
+
+msgid "Rules"
+msgstr ""
+
+msgid "SMTP PROXY"
+msgstr ""
+
+msgid "SOCKS PROXY"
+msgstr ""
+
+msgid "SPAM FILTER"
+msgstr ""
+
+msgid "SPAMD"
+msgstr ""
+
+msgid "SYSTEM"
+msgstr ""
+
+msgid "Scan"
+msgstr ""
+
+msgid "Sensors"
+msgstr ""
+
+msgid "Sites"
+msgstr ""
+
+msgid "Source Docs"
+msgstr ""
+
+msgid "Spamd DB"
+msgstr ""
+
+msgid "Startup"
+msgstr ""
+
+msgid "States"
+msgstr ""
+
+msgid "Statistics"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Transfer"
+msgstr ""
+
+msgid "URLs"
+msgstr ""
+
+msgid "VIRUS FILTER"
+msgstr ""
+
+msgid "Virus Exts"
+msgstr ""
+
+msgid "Virus Mimes"
+msgstr ""
+
+msgid "Virus Sites"
+msgstr ""
+
+msgid "Virus URLs"
+msgstr ""
+
+msgid "WEB FILTER"
+msgstr ""
+
+msgid "WEB SERVER"
+msgstr ""
+
+msgid "WUI"
+msgstr ""
+
+msgid "WUI Logs"
+msgstr ""

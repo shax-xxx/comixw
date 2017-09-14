@@ -1,0 +1,25 @@
+<area shape="rect" href="$classSquid.html#9f2f5a8669182bf3a1d9d3bfa6594ab7" title="Log parser." alt="" coords="269,5,421,32">
+<area shape="rect" href="$classSpamd.html#297c05afc82c12cd113cb56eae47c13b" title="Log parser." alt="" coords="264,56,427,83">
+<area shape="rect" href="$classSpamassassin.html#6c0da9efffeb5bd6a1777eff90487a02" title="Log parser." alt="" coords="241,107,449,133">
+<area shape="rect" href="$classSnortips.html#f72b7171f32c82b16cd0c36a96de71b7" title="Parses snortips IPS logs." alt="" coords="260,157,431,184">
+<area shape="rect" href="$classSnortalerts.html#739692605a8e36136d3a418780db4a6c" title="Log parser." alt="" coords="251,208,440,235">
+<area shape="rect" href="$classSmtpgated.html#bcc7264e68e4df1e3272b17e27adfd19" title="Log parser." alt="" coords="251,259,440,285">
+<area shape="rect" href="$classP3scan.html#53638375c1f2fb2af9fbbbc1811cfdbb" title="Log parser." alt="" coords="264,309,427,336">
+<area shape="rect" href="$classOpenssh.html#db5e84034ebebb45694ac84d93acd711" title="Log parser." alt="" coords="259,360,432,387">
+<area shape="rect" href="$classNamed.html#42160cc99499d230b030b8de19702b3b" title="Log parser." alt="" coords="263,411,428,437">
+<area shape="rect" href="$classModel.html#580c841570e910e36dbf9879e96ec7c7" title="Log parser." alt="" coords="268,461,423,488">
+<area shape="rect" href="$classFtpproxy.html#38abdac0728054d105e43486f989f900" title="Log parser." alt="" coords="257,512,433,539">
+<area shape="rect" href="$classFreshclam.html#023b7ded8c18d0f1fb5698ea39cfb1a6" title="Freshclam::ParseLogLine" alt="" coords="253,563,437,589">
+<area shape="rect" href="$classDansguardianlogs.html#615476276d32b326a0ca376272cb8e03" title="Log parser." alt="" coords="229,613,461,640">
+<area shape="rect" href="$classCwlogs.html#b3b1175f336c116258cd4fdb649f128b" title="Log parser." alt="" coords="264,664,427,691">
+<area shape="rect" href="$classClamd.html#f54f6d626a59d8524c215b3cf2264cfa" title="Clamd::ParseLogLine" alt="" coords="265,715,425,741">
+<area shape="rect" href="$classApachelogs.html#ce114fa7c97b8948b923637bed3f0409" title="Log parser." alt="" coords="251,765,440,792">
+<area shape="rect" href="$classApache.html#e19dcac31ffb3970b0f513692d953e60" title="Log parser." alt="" coords="263,816,428,843">
+<area shape="rect" href="$classSpamassassin.html#c2fe7f0398515200232f71f0dc8b45e2" title="Gets logs for live logs pages." alt="" coords="509,81,712,108">
+<area shape="rect" href="$classSpamassassin.html#8a7106a1f0bdc04ac7cbda30de170945" title="Gets lines in file." alt="" coords="523,132,699,159">
+<area shape="rect" href="$classOpenssh.html#684a7bae74bc190a59ffbb1cc957dd03" title="Gets logs for live logs pages." alt="" coords="528,335,693,361">
+<area shape="rect" href="$classOpenssh.html#a2522838624ccdf57da6c8dc8b3dcfff" title="Gets lines in file." alt="" coords="541,385,680,412">
+<area shape="rect" href="$classModel.html#2de95faa4fc211f54fcc882609ca4d7f" title="Updates statistics incrementally, both brief and full." alt="" coords="536,461,685,488">
+<area shape="rect" href="$classModel.html#ffd6bba4698ad739939497598cadde66" title="Main statistics collector, as module data set." alt="" coords="761,461,887,488">
+<area shape="rect" href="$classModel.html#a2edac23e52476f8e5c70d9893bc1fcb" title="Returns both brief and full statistics." alt="" coords="936,436,1077,463">
+<area shape="rect" href="$classModel.html#e3b375de5f6df4faf74a95d64748e048" title="Model::Model" alt="" coords="1125,461,1232,488">

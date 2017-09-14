@@ -1,0 +1,4 @@
+# $ComixWall: cpus.layout,v 1.2 2009/10/07 16:48:22 soner Exp $
+
+group	name="CPU Load";
+graph	rrdfile=/var/www/htdocs/comixwall/View/symon/rrds/localhost/cpu0.rrd, title="CPU 0";

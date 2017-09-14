@@ -1,0 +1,6 @@
+# $ComixWall: mbufs.layout,v 1.1 2009/09/04 15:35:21 soner Exp $
+#
+# Layout to show pf usage
+
+group   name="Mbuf Statistics";
+graph   rrdfile=/var/www/htdocs/comixwall/View/symon/rrds/localhost/mbuf.rrd, title="Kernel Memory Management for Networking Protocols";

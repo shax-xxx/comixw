@@ -1,0 +1,27 @@
+/clamd.layout/1.1/Fri Aug 21 20:17:14 2009//THEAD
+/cpus.layout/1.2/Wed Oct  7 16:48:22 2009//THEAD
+/dansguardian.layout/1.1/Fri Aug 21 20:17:14 2009//THEAD
+/dhcpd.layout/1.1/Fri Aug 21 20:17:14 2009//THEAD
+/disks.layout/1.2/Wed Oct  7 16:48:22 2009//THEAD
+/ftpproxy.layout/1.1/Fri Aug 21 20:17:14 2009//THEAD
+/httpd.layout/1.1/Fri Aug 21 20:17:15 2009//THEAD
+/ifs.layout/1.3/Sat Oct 17 23:06:41 2009//THEAD
+/imspector.layout/1.1/Fri Aug 21 20:17:15 2009//THEAD
+/mbufs.layout/1.1/Fri Sep  4 15:35:21 2009//THEAD
+/memory.layout/1.1/Fri Sep  4 15:35:21 2009//THEAD
+/named.layout/1.1/Fri Aug 21 20:17:15 2009//THEAD
+/openvpn.layout/1.1/Fri Aug 21 20:17:15 2009//THEAD
+/p3scan.layout/1.1/Fri Aug 21 20:17:15 2009//THEAD
+/partitions.layout/1.3/Wed Oct  7 16:48:22 2009//THEAD
+/protograph.layout/1.2/Fri Nov 20 17:36:48 2009//THEAD
+/sensors.layout/1.1/Wed Oct  7 16:34:46 2009//THEAD
+/smtpgated.layout/1.1/Fri Aug 21 20:17:15 2009//THEAD
+/snort.layout/1.1/Fri Aug 21 20:17:15 2009//THEAD
+/snortips.layout/1.2/Wed Oct  7 16:34:46 2009//THEAD
+/sockd.layout/1.1/Fri Aug 21 20:17:15 2009//THEAD
+/spamassassin.layout/1.1/Fri Aug 21 20:17:15 2009//THEAD
+/squid.layout/1.1/Fri Aug 21 20:17:15 2009//THEAD
+/sshd.layout/1.1/Fri Aug 21 20:17:15 2009//THEAD
+/states.layout/1.3/Fri Nov 20 17:36:48 2009//THEAD
+/transfer.layout/1.1/Fri Sep  4 15:35:21 2009//THEAD
+D

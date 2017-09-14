@@ -1,0 +1,46 @@
+<area shape="rect" href="$classSquid.html#240c52da7a337b4a8020b16cb5cbc0e4" title="Adds IP:port to squid config file." alt="" coords="545,363,676,389">
+<area shape="rect" href="$classFreshclam.html#c009eaba12e07166677ba5cc230d47de" title="Freshclam::AddMirror" alt="" coords="531,768,691,795">
+<area shape="rect" href="$classImspector.html#425337aca36526afae0eb7dcce80cde2" title="Imspector::DelAcl" alt="" coords="269,261,403,288">
+<area shape="rect" href="$classImspector.html#1d2c314f7c88c48b4024de9daf523684" title="Imspector::DelBadword" alt="" coords="249,160,423,187">
+<area shape="rect" href="$classSystem.html#78e989e0511cd884e9167d0364105876" title="Deletes host from hosts file." alt="" coords="271,464,401,491">
+<area shape="rect" href="$classDansguardian.html#1541d167cf6bb0f98a07d51ffdacf01f" title="Dansguardian::DelIp" alt="" coords="260,565,412,592">
+<area shape="rect" href="$classSquid.html#4a83698e0e8bfe91bf7387392f0eadce" title="Deletes IP:port from squid config file." alt="" coords="273,363,399,389">
+<area shape="rect" href="$classSnortips.html#0a79b554c3dfc53f72b3bd1432bcc4d1" title="Delete a keyword." alt="" coords="256,971,416,997">
+<area shape="rect" href="$classFreshclam.html#1aee4c6ccc8aaeb8c80e15e397d8d8e8" title="Freshclam::DelMirror" alt="" coords="259,667,413,693">
+<area shape="rect" href="$classDansguardian.html#0397f612ade747b0ac17128e0ba25cec" title="Dansguardian::DisableExt" alt="" coords="243,616,429,643">
+<area shape="rect" href="$classImspector.html#de8f8ae9dc8269f762904c44cf933db3" title="Imspector::MoveAclDown" alt="" coords="517,8,704,35">
+<area shape="rect" href="$classImspector.html#0f0532238604aad7ad3e5a34f20bcd37" title="Imspector::MoveAclUp" alt="" coords="527,59,695,85">
+<area shape="rect" href="$classSnort.html#b7bab2d1ded32940d590bafb2b010419" title="Snort::MoveRuleDown" alt="" coords="253,869,419,896">
+<area shape="rect" href="$classSnort.html#723ad507b99013487e6a24aa33152611" title="Snort::MoveRuleUp" alt="" coords="263,768,409,795">
+<area shape="rect" href="$classSymon.html#137b0807afc7a48b6997dd2584cc6b2b" title="Symon::SetCpus" alt="" coords="271,920,401,947">
+<area shape="rect" href="$classNamed.html#2110b8e22b965ac902eecd9e49a97219" title="Sets name server forwarders." alt="" coords="249,1021,423,1048">
+<area shape="rect" href="$classPmacct.html#43f1c3f2ca041d547ab1a59d683dab7a" title="Pmacct::SetIf" alt="" coords="281,1072,391,1099">
+<area shape="rect" href="$classDhcpd.html#6af5976da0f892e3f73a5482c3a3d366" title="Sets ifs." alt="" coords="281,1224,391,1251">
+<area shape="rect" href="$classDante.html#ce7e9cc8923d777b7412b65cf933315d" title="Dante::SetIfs" alt="" coords="283,1123,389,1149">
+<area shape="rect" href="$classDante.html#2fe84bd609e6502d31ad6ae5546e7626" title="Dante::SetIntnet" alt="" coords="271,1173,401,1200">
+<area shape="rect" href="$classSystem.html#4286f1784688472ca239dc2c743e4676" title="Changes nameserver." alt="" coords="517,515,704,541">
+<area shape="rect" href="$classSpamd.html#6b0dddc49e6ec41c060083158aafa151" title="Spamd::SetStartupIf" alt="" coords="257,1275,415,1301">
+<area shape="rect" href="$classSnort.html#7402562f5e5687ef31d4f238d93fbf68" title="Snort::SetStartupIfs" alt="" coords="260,819,412,845">
+<area shape="rect" href="$classApache.html#c2155e099d16e92fe196354941270ac1" title="Apache::SetWebalizerHostname" alt="" coords="221,1325,451,1352">
+<area shape="rect" href="$classSquid.html#19165b349f0a1e77ed05b9e2ead005c5" title="Squid::Squid" alt="" coords="824,337,925,364">
+<area shape="rect" href="$classFreshclam.html#5fe5d724af1acf79174ba885d89b968f" title="Freshclam::Freshclam" alt="" coords="793,743,956,769">
+<area shape="rect" href="$classImspector.html#60fbadb2da6ccde868e5af4e9b6b3c7f" title="Imspector::AddAcl" alt="" coords="541,261,680,288">
+<area shape="rect" href="$classImspector.html#da969b4f04feb17cc45173029137042b" title="Imspector::Imspector" alt="" coords="795,135,955,161">
+<area shape="rect" href="$classImspector.html#33903adb8a755188d814506860428899" title="Imspector::AddBadword" alt="" coords="523,160,699,187">
+<area shape="rect" href="$classSystem.html#b056bd6c5c382a7c71bbf20c134e7965" title="Adds host line to hosts file." alt="" coords="543,464,679,491">
+<area shape="rect" href="$classSystem.html#e317936c9bcf1374d61745572e0f2f8a" title="System::System" alt="" coords="809,464,940,491">
+<area shape="rect" href="$classDansguardian.html#8682b938e4d7c66e0e520af27110e1dc" title="Dansguardian::AddIp" alt="" coords="533,565,688,592">
+<area shape="rect" href="$classDansguardian.html#3223beac3b98c7358167ff9be1558e82" title="Dansguardian::Dansguardian" alt="" coords="771,616,979,643">
+<area shape="rect" href="$classSnortips.html#a1a3dcf40c186e80f655b3e849204f79" title="Add a keyword." alt="" coords="528,971,693,997">
+<area shape="rect" href="$classSnortips.html#1f1eb35f976124f24754d74193dd1c44" title="Snortips::Snortips" alt="" coords="807,945,943,972">
+<area shape="rect" href="$classDansguardian.html#ee2d85fa304e8beebbc5663db1343391" title="Dansguardian::DisableExtMime" alt="" coords="499,667,723,693">
+<area shape="rect" href="$classSnort.html#ce6c82705690744cdc5ae36ed96a7ce1" title="Snort::Snort" alt="" coords="560,819,661,845">
+<area shape="rect" href="$classSymon.html#13e2df64712f14505a14cd01d7d9d0d9" title="Symon::Symon" alt="" coords="549,869,672,896">
+<area shape="rect" href="$classNamed.html#465e6be10ecf9bf9b3011e539cb6b0a7" title="Named::Named" alt="" coords="548,1021,673,1048">
+<area shape="rect" href="$classPmacct.html#3eaea71d54c439d121ef90afc369876f" title="Pmacct::Pmacct" alt="" coords="547,1072,675,1099">
+<area shape="rect" href="$classDhcpd.html#a2eb2a470d473e5961cf34bf76be48d7" title="Adds a dhcpd interface." alt="" coords="823,1224,927,1251">
+<area shape="rect" href="$classDhcpd.html#392f0e213b794f59c9c06b0614b16f16" title="Deletes a dhcpd interface." alt="" coords="560,1173,661,1200">
+<area shape="rect" href="$classDhcpd.html#abdc96b3ea16dbee5c5a0ed82819a526" title="Dhcpd::Dhcpd" alt="" coords="1027,1199,1139,1225">
+<area shape="rect" href="$classDante.html#30959ae5529aab6054f30e390e33f1f2" title="Dante::Dante" alt="" coords="556,1123,665,1149">
+<area shape="rect" href="$classSpamd.html#f2684768b6c00120af5c52aafd8e8116" title="Spamd::Spamd" alt="" coords="549,1275,672,1301">
+<area shape="rect" href="$classApache.html#4f93f9a47b2a4bdca07820dbbfe7ea3a" title="Apache::Apache" alt="" coords="548,1325,673,1352">

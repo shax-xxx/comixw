@@ -1,0 +1,4 @@
+# $ComixWall: memory.layout,v 1.1 2009/09/04 15:35:21 soner Exp $
+
+group	name="Memory Usage";
+graph	rrdfile=/var/www/htdocs/comixwall/View/symon/rrds/localhost/mem.rrd, title="Memory Usage";

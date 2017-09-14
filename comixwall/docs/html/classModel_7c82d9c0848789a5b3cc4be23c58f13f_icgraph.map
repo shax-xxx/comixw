@@ -1,0 +1,10 @@
+<area shape="rect" href="$classModel.html#e87cab614cb0dda5a48a0483ad20bb13" title="Gets the number of lines added to log files since last tmp update." alt="" coords="693,157,883,184">
+<area shape="rect" href="$classModel.html#9832a4bcb216f976db39555e231ec2b5" title="Gets name of the tmp statistics file for the given log file." alt="" coords="236,107,423,133">
+<area shape="rect" href="$classModel.html#5b128ecbe8f5dba639ac124a1306be2b" title="Checks if the given log file has been updated." alt="" coords="699,5,877,32">
+<area shape="rect" href="$classModel.html#61048fb2a76e82a62bc1cb060f956846" title="Saves collected statistics with current line count and stat() output." alt="" coords="491,157,627,184">
+<area shape="rect" href="$classModel.html#2de95faa4fc211f54fcc882609ca4d7f" title="Updates statistics incrementally, both brief and full." alt="" coords="932,157,1081,184">
+<area shape="rect" href="$classModel.html#ffd6bba4698ad739939497598cadde66" title="Main statistics collector, as module data set." alt="" coords="1132,107,1257,133">
+<area shape="rect" href="$classModel.html#a2edac23e52476f8e5c70d9893bc1fcb" title="Returns both brief and full statistics." alt="" coords="1307,56,1448,83">
+<area shape="rect" href="$classModel.html#e3b375de5f6df4faf74a95d64748e048" title="Model::Model" alt="" coords="1496,81,1603,108">
+<area shape="rect" href="$classModel.html#71879d121d5eb29eefaca11136b08239" title="Gets saved statistics for the given log file." alt="" coords="704,107,872,133">
+<area shape="rect" href="$classModel.html#63f975dc16ccd933fe89d6c7b78b2ffb" title="Gets previous line count and stat() from statistics file." alt="" coords="472,56,645,83">

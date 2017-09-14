@@ -1,0 +1,23 @@
+<area shape="rect" href="$classModel.html#96cdbca1cb750f08af734720ce035527" title="Generates date regexp to be used by statistics functions." alt="" coords="189,45,363,72">
+<area shape="rect" href="$classModel.html#06a223ba294ce4dedc681900919c35b5" title="Generates hour regexp to be used by statistics functions." alt="" coords="189,96,363,123">
+<area shape="rect" href="$classModel.html#71879d121d5eb29eefaca11136b08239" title="Gets saved statistics for the given log file." alt="" coords="429,133,597,160">
+<area shape="rect" href="$classModel.html#5b128ecbe8f5dba639ac124a1306be2b" title="Checks if the given log file has been updated." alt="" coords="424,57,603,84">
+<area shape="rect" href="$classModel.html#2de95faa4fc211f54fcc882609ca4d7f" title="Updates statistics incrementally, both brief and full." alt="" coords="201,324,351,351">
+<area shape="rect" href="$classModel.html#ad5ea6ecfd799e86a4bf8d951f377758" title="Copies original log file to tmp location." alt="" coords="181,375,371,401">
+<area shape="rect" href="$Controller_2lib_8php.html#452de2ffc796752557de0932efe45dab" title="Wrapper for controller error logging via syslog." alt="" coords="937,133,1028,160">
+<area shape="rect" href="$classModel.html#79a6802745276910632fee29f9585495" title="Reads file contents." alt="" coords="691,83,803,109">
+<area shape="rect" href="$classModel.html#9832a4bcb216f976db39555e231ec2b5" title="Gets name of the tmp statistics file for the given log file." alt="" coords="889,83,1076,109">
+<area shape="rect" href="$classModel.html#7c82d9c0848789a5b3cc4be23c58f13f" title="Returns the original file name for the given log file." alt="" coords="1129,159,1308,185">
+<area shape="rect" href="$classModel.html#63f975dc16ccd933fe89d6c7b78b2ffb" title="Gets previous line count and stat() from statistics file." alt="" coords="660,184,833,211">
+<area shape="rect" href="$classModel.html#2d12753c999aac330108a00dd0f3abec" title="Runs given shell command and returns its output as string." alt="" coords="887,184,1079,211">
+<area shape="rect" href="$classModel.html#d94e185c4edbac25ceabb66fe5c7f4db" title="Day statistics collector." alt="" coords="427,513,600,540">
+<area shape="rect" href="$classModel.html#e87cab614cb0dda5a48a0483ad20bb13" title="Gets the number of lines added to log files since last tmp update." alt="" coords="419,324,608,351">
+<area shape="rect" href="$classModel.html#0e43ca38ee4cee9f29e6b8192024dc28" title="Gets line count of file." alt="" coords="657,387,836,413">
+<area shape="rect" href="$classModel.html#2b5091c9fb872dccd476b2147d163e0d" title="Builds generic grep command to extract log lines." alt="" coords="421,431,605,457">
+<area shape="rect" href="$classModel.html#580c841570e910e36dbf9879e96ec7c7" title="Log parser." alt="" coords="436,603,591,629">
+<area shape="rect" href="$classModel.html#61048fb2a76e82a62bc1cb060f956846" title="Saves collected statistics with current line count and stat() output." alt="" coords="679,235,815,261">
+<area shape="rect" href="$classModel.html#eee718dc90c3fc97b8e613e5f5a0a302" title="Hour statistics collector." alt="" coords="657,589,836,616">
+<area shape="rect" href="$classModel.html#da770adbe085197a1fc3b64fc3fde31d" title="Increments stats for the given values." alt="" coords="923,539,1043,565">
+<area shape="rect" href="$classModel.html#d11bfed931dee6dcda7576ab5a0d950a" title="Minute statistics collector." alt="" coords="888,589,1077,616">
+<area shape="rect" href="$classModel.html#f0db0d28b44c9a296eea592c5c551969" title="Parses standard syslog line." alt="" coords="660,640,833,667">
+<area shape="rect" href="$classModel.html#cdf121f58a23152dcc4071dfe70db060" title="Writes contents to file." alt="" coords="927,285,1039,312">

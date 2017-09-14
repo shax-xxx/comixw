@@ -1,0 +1,4 @@
+<area shape="rect" href="$Controller_2lib_8php.html#452de2ffc796752557de0932efe45dab" title="Wrapper for controller error logging via syslog." alt="" coords="279,5,369,32">
+<area shape="rect" href="$classModel.html#9832a4bcb216f976db39555e231ec2b5" title="Gets name of the tmp statistics file for the given log file." alt="" coords="231,56,417,83">
+<area shape="rect" href="$classModel.html#2d12753c999aac330108a00dd0f3abec" title="Runs given shell command and returns its output as string." alt="" coords="228,107,420,133">
+<area shape="rect" href="$classModel.html#7c82d9c0848789a5b3cc4be23c58f13f" title="Returns the original file name for the given log file." alt="" coords="471,56,649,83">

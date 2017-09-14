@@ -1,0 +1,127 @@
+# $ComixWall: comixwall_CONTROL.po,v 1.2 2009/11/26 07:55:58 soner Exp $
+# Copyright (C) 2009 Soner Tari, The ComixWall ISG project
+# This file is distributed under the same license as ComixWall.
+msgid ""
+msgstr ""
+"Project-Id-Version: ComixWall 4.6\n"
+"Report-Msgid-Bugs-To: soner@comixwall.org\n"
+"POT-Creation-Date: 2009-11-11 16:21+0200\n"
+"PO-Revision-Date: 2009-11-11 16:24+0200\n"
+"Last-Translator: Soner Tari <soner@comixwall.org>\n"
+"Language-Team: LANGUAGE <misc@comixwall.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "< Previous"
+msgstr ""
+
+msgid "<< First"
+msgstr ""
+
+msgid "Add"
+msgstr ""
+
+msgid "Apply"
+msgstr ""
+
+msgid "Block"
+msgstr ""
+
+msgid "Compressed"
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "Create"
+msgstr ""
+
+msgid "Daily"
+msgstr ""
+
+msgid "Defaults"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Disable"
+msgstr ""
+
+msgid "Display"
+msgstr ""
+
+msgid "Download"
+msgstr ""
+
+msgid "Enable"
+msgstr ""
+
+msgid "Horizontal"
+msgstr ""
+
+msgid "Hourly"
+msgstr ""
+
+msgid "Last >>"
+msgstr ""
+
+msgid "Log in"
+msgstr ""
+
+msgid "Make Dynamic"
+msgstr ""
+
+msgid "Make Static"
+msgstr ""
+
+msgid "Move Down"
+msgstr ""
+
+msgid "Move Up"
+msgstr ""
+
+msgid "Next >"
+msgstr ""
+
+msgid "Redraw"
+msgstr ""
+
+msgid "Reinitialize"
+msgstr ""
+
+msgid "Reload"
+msgstr ""
+
+msgid "Restart"
+msgstr ""
+
+msgid "Rotate"
+msgstr ""
+
+msgid "Rotate All"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Select"
+msgstr ""
+
+msgid "Start"
+msgstr ""
+
+msgid "Stop"
+msgstr ""
+
+msgid "Unblock"
+msgstr ""
+
+msgid "Unblock All"
+msgstr ""
+
+msgid "Vertical"
+msgstr ""
