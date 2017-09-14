@@ -229,7 +229,7 @@ class Symon extends Model
 		}
 
 		$proclist= array(
-			'httpd',
+			'nginx',
 			'e2guardian',
 			'snort',
 			'clamd',

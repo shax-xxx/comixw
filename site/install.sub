@@ -609,7 +609,7 @@ __EOT
 
 			_pkgshortname=${_f%%-*}
 			case $_f in
-			#php-5.3.21.tgz
+			#php-5.5.14p0.tgz
 			php-*)
 				_pkgshortname=${_f%-*}
 				;;
@@ -619,7 +619,7 @@ __EOT
 				_pkgaddopts=-u
 				_pkgname=${_f%%-*}
 				case $_f in
- 				#e2guardian-3.0.1.tgz
+ 				#e2guardian-3.0.3.tgz
 				e2guardian-*)
 					# Delete previous clamd flavor
 					pkg_delete $_pkgname
@@ -634,22 +634,22 @@ __EOT
 					# OpenVPN uses lzo2 now
 					pkg_delete -F dependencies lzo
 					;;
-  				#squid-3.4.2p0.tgz
+  				#squid-3.4.6p1.tgz
 				squid-*)
 					_pkgaddopts="-u -F update"
 					;;
-  				#php-5.3.21.tgz
+  				#php-5.5.14p0.tgz
 				php-*)
 					_pkgname=${_f%-*}
 					_pkgaddopts="-u -F update"
 					;;
-  				#pmacct-0.12.5p4.tgz
+  				#pmacct-1.5.0rc2.tgz
 				pmacct-*)
 					# Version 0.11.6 was under sysutils port, 0.12.5x is under net now
 					# hence pkg_add cannot update
 					pkg_delete -F dependencies $_pkgname
 					;;
-				#snort-2.9.6.0.tgz
+				#snort-2.9.6.1.tgz
 				snort-*)
 					# plugins lying around (untouched during upgrade) of the previous
 					# version prevent snort starting, clean them up
@@ -687,6 +687,7 @@ __EOT
 				;;
 			php-*)
 				pkg_add php-pcntl
+				pkg_add php-fpm
 				;;
 			esac
 			;;
@@ -1088,7 +1089,7 @@ install_sets() {
 finish_up() {
 
 	/sbin/ldconfig /usr/local/lib /usr/X11R6/lib/
-	ln -s /usr/local/bin/php-5.4 /usr/local/bin/php
+	ln -s /usr/local/bin/php-5.5 /usr/local/bin/php
 	
 	if [[ -f /var/www/htdocs/comixwall/Installer/install.php ]]; then
 		echo "Running post-install script..."
@@ -1097,9 +1098,9 @@ finish_up() {
 	
 	if [[ -d /var/www/htdocs/comixwall/View/symon/rrds/localhost ]]; then
 		cd /var/www/htdocs/comixwall/View/symon/rrds/localhost
-		if [[ -x /usr/local/share/symon/c_smrrds.sh ]]; then
+		if [[ -x /usr/local/share/examples/symon/c_smrrds.sh ]]; then
 			echo "Creating symon rrd files..."
-			/usr/local/share/symon/c_smrrds.sh all
+			/usr/local/share/examples/symon/c_smrrds.sh all
 		fi
 	fi
 	
@@ -1134,7 +1135,7 @@ __EOT
 # #######################################################################
 # Initial actions common to both installs and upgrades.
 # #######################################################################
-VERSION='5.5'
+VERSION='5.6'
 ARCH=$(/usr/bin/machine)
 
 VMAJ=${VERSION%%\.*}
@@ -1165,28 +1166,28 @@ CDDEVS=$(scan_dmesg "${MDCDDEVS:-/^cd[0-9][0-9]* /s/ .*//p}")
 [[ -z $CDDEVS ]] && CDDEVS="cd0,cd1,cd2"
 
 # Selected sets will be installed in the order they are listed in $THESETS.
-THESETS="clamav-0.98.1.tgz \
+THESETS="clamav-0.98.4p0.tgz \
 		clamavdb.tar.gz \
-		e2guardian-3.0.1.tgz \
+		e2guardian-3.0.3.tgz \
 		bigblacklist_comixwall.tar.gz \
-		squid-3.4.2p0.tgz \
-		snort-2.9.6.0.tgz \
-		snortrules-snapshot-2960.tar.gz \
+		squid-3.4.6p1.tgz \
+		snort-2.9.6.1p0.tgz \
+		snortrules-snapshot-2962.tar.gz \
 		snortips-4.6.tgz \
 		openvpn-2.3.2.tgz \
-		dante-1.4.0.tgz \
-		webalizer-2.23.05.29p3.tgz \
-		symon-2.86p1.tgz \
-		pmacct-0.12.5p4.tgz \
-		pftop-0.7p12.tgz \
-		php-5.4.24.tgz \
-		mc-4.8.1.7.tgz \
+		dante-1.4.0p0.tgz \
+		webalizer-2.23.08.30p0.tgz \
+		symon-2.86p5.tgz \
+		pmacct-1.5.0rc2.tgz \
+		pftop-0.7p13.tgz \
+		php-5.5.14p0.tgz \
+		mc-4.8.12.tgz \
 		wget-1.15.tgz \
 		colorls-5.4p0.tgz \
 		$CW_WEBIF_TARFILE \
 		$CW_CONFIG_TARFILE"
 
-SANESETS="php-5.4.24.tgz \
+SANESETS="php-5.5.14p0.tgz \
 		$CW_WEBIF_TARFILE"
 
 # Introduce ourselves.

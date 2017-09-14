@@ -29,7 +29,7 @@ $symon['graph_debug']=1;
 
 
 /* Test PHP configuration */
-print '<pre>Printing apache configuration: ';
+print '<pre>Printing nginx configuration: ';
 print "\xa".' server = ';
 if (isset($HTTP_SERVER_VARS["SERVER_SIGNATURE"])) {
 	if (preg_match("/.*Apache\/([0-9.]+)/i", $HTTP_SERVER_VARS["SERVER_SIGNATURE"], $match)) {

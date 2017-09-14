@@ -1,5 +1,5 @@
 <?php
-/* $ComixWall: include.accesslogs.php,v 1.3 2009/11/10 18:47:50 soner Exp $ */
+/* $ComixWall: info.php,v 1.15 2009/11/10 18:47:50 soner Exp $ */
 
 /*
  * Copyright (c) 2004-2009 Soner Tari.  All rights reserved.
@@ -33,49 +33,14 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-require_once('../lib/vars.php');
-require_once('../lib/view.php');
+require_once('include.php');
 
-class Apachelogs extends View
-{
-	public $Model= 'apachelogs';
-
-	function Apachelogs()
-	{
-		$this->LogsHelpMsg= _HELPWINDOW('These are access logs of the Apache web server. Logs contain logged-in users, client IP addresses, and pages accessed.');
-	}
-	
-	function FormatDate($date)
-	{
-		global $MonthNames;
+$View->ProcessRestartStopRequests();
 		
-		return $date['Day'].'/'.$MonthNames[$date['Month']].'/'.date('Y');
-	}
-
-	function FormatDateArray($datestr, &$date)
-	{
-		global $MonthNumbers;
-
-		if (preg_match('/^(\d+)\/(\w+)\/(\d+)$/', $datestr, $match)) {
-			$date['Day']= $match[1];
-			$date['Month']= $MonthNumbers[$match[2]];
-			return TRUE;
-		}
-		else if (preg_match('/(\w+)\s+(\d+)/', $datestr, $match)) {
-			if (array_key_exists($match[1], $MonthNumbers)) {
-				$date['Month']= sprintf('%02d', $MonthNumbers[$match[1]]);
-				$date['Day']= sprintf('%02d', $match[2]);
-				return TRUE;
-			}
-		}
-		return FALSE;
-	}
-	
-	function FormatLogCols(&$cols)
-	{
-		$cols['Link']= wordwrap($cols['Link'], 50, '<br />', TRUE);
-	}
-}
-
-$View= new Apachelogs();
+$Reload= TRUE;
+require_once($VIEW_PATH.'header.php');
+		
+$View->PrintStatusForm(PRINT_COUNT);
+PrintHelpWindow(_HELPWINDOW('This web administration interface is served by nginx web server, OpenBSD/nginx. If you stop the web server, you will lose your connection to this web interface. You can restart it on the command line.'));
+require_once($VIEW_PATH.'footer.php');
 ?>

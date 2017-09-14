@@ -177,7 +177,7 @@ $ModelsToStat= array(
 	'openssh',
 	'ftp-proxy',
 	'dante',
-	'apache',
+	'nginx',
 	'monitoring',
 	);
 ?>

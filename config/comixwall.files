@@ -32,8 +32,11 @@ etc/openvpn/dh1024.pem,444,root,wheel
 etc/openvpn/server.conf,644,root,wheel
 etc/openvpn/server.crt,444,root,wheel
 etc/openvpn/server.key,400,root,wheel
-etc/php-5.4/pcntl.ini,644,root,bin
-etc/php-5.4.ini,644,root,daemon
+etc/nginx/nginx.conf,644,root,wheel
+etc/httpd.conf,644,root,wheel
+etc/php-5.5/pcntl.ini,644,root,bin
+etc/php-5.5.ini,644,root,daemon
+etc/php-fpm.conf,644,root,wheel
 etc/pmacct/pmacctd-pnrg.conf,644,root,wheel
 etc/pmacct/pmacctd-protograph.conf,644,root,wheel
 etc/snort/snort.conf,644,root,wheel
@@ -45,6 +48,7 @@ etc/clamd.conf,644,root,wheel
 etc/dhcpd.conf,644,root,wheel
 etc/freshclam.conf,644,root,wheel
 etc/motd,664,root,wheel
+etc/ntpd.conf,644,root,wheel
 etc/newsyslog.conf,644,root,wheel
 etc/pf.conf,600,root,wheel
 etc/pf.conf.afterhours,600,root,wheel
@@ -96,7 +100,9 @@ var/log/snortips.log,640,root,wheel
 var/log/spamd.log,640,root,wheel
 var/named/etc/named.conf,640,root,named
 var/www/cgi-bin/man.cgi,511,root,bin
-var/www/conf/modules/php-5.4.conf,644,root,daemon
+var/www/conf/modules/php-5.5.conf,644,root,daemon
 var/www/conf/.htpasswd,644,root,wheel
 var/www/conf/httpd.conf,644,root,daemon
-var/www/logs/access_log,640,root,daemon
+var/www/logs/access.log,640,root,daemon
+var/www/logs/error.log,640,root,daemon
+

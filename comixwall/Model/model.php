@@ -59,7 +59,7 @@ class Model
 	
 	private $confDir= '/etc/';
 	
-	/// Apache password file pathname.
+	/// web server password file pathname.
 	protected $passwdFile= '/var/www/conf/.htpasswd';
 
 	public $CmdLogStart= '/usr/bin/head -1 <LF>';
@@ -709,30 +709,28 @@ class Model
 	{
 		/// @warning Args should never be empty, htpasswd expects 2 args
 		$passwd= $passwd == '' ? "''" : $passwd;
-
-		/// Passwords in htpasswd file are SHA encrypted.
-		exec("/usr/bin/htpasswd -bn -s '' $passwd 2>&1", $output, $retval);
-		if ($retval === 0) {
-			$htpasswd= ltrim($output[0], ':');
 		
-			/// @warning Have to trim newline chars, or passwds do not match
-			$passwdfile= file($this->passwdFile, FILE_IGNORE_NEW_LINES);
-			
-			// Do not use preg_match() here. If there is more than one line (passwd) for a user in passwdFile,
-			// this array method ensures that only one password apply to each user, the last one in passwdFile.
-			// This should never happen actually, but in any case.
-			$passwdlist= array();
-			foreach ($passwdfile as $nvp) {
-				list($u, $p)= explode(':', $nvp, 2);
-				$passwdlist[$u]= $p;
-			}
+		// For debug purpose
+		//cwc_syslog(LOG_NOTICE, __FILE__, __FUNCTION__, __LINE__, "original:  $passwd");
 
-			if ($passwdlist[$user] === $htpasswd) {
-				return TRUE;
-			}
+		/// @warning Have to trim newline chars, or passwds do not match
+		$passwdfile= file($this->passwdFile, FILE_IGNORE_NEW_LINES);
+		
+		// Do not use preg_match() here. If there is more than one line (passwd) for a user in passwdFile,
+		// this array method ensures that only one password apply to each user, the last one in passwdFile.
+		// This should never happen actually, but in any case.
+		$passwdlist= array();
+		foreach ($passwdfile as $nvp) {
+			list($u, $p)= explode(':', $nvp, 2);
+			$passwdlist[$u]= $p;
 		}
-		ViewError(implode("\n", $output));
-		return FALSE;
+		
+		if (password_verify($passwd, $passwdlist[$user])) {
+			return TRUE;
+		} else {
+			ViewError("Password mismatch");
+			return FALSE;
+		}
 	}
 
 	/** Extracts the datetime of the first line in the log file.
@@ -2685,9 +2683,9 @@ $Modules = array(
         		),
     		),
 		),
-    'apache' => array(
+    'nginx' => array(
         'Name' => _TITLE2('Web Server'),
-        'Path' => 'apache',
+        'Path' => 'nginx',
         'Fields' => array(
             'Date',
             'Time',
@@ -2708,7 +2706,7 @@ $Modules = array(
         		),
     		),
 		),
-    'apachelogs' => array(
+    'nginxlogs' => array(
         'Name' => _TITLE2('Web Server Access'),
         'Fields' => array(
             'DateTime',
@@ -3263,8 +3261,8 @@ $ModelsToLogConfig= array(
 	'openssh',
 	'ftp-proxy',
 	'dante',
-	'apache',
-	'apachelogs',
+	'nginx',
+	'nginxlogs',
 	'cwwui_syslog',
 	'cwc_syslog',
 	'monitoring',

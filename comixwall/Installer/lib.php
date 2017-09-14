@@ -113,7 +113,7 @@ function ApplyConfig()
 			cwwui_syslog(LOG_ERR, __FILE__, __FUNCTION__, __LINE__, "Failed setting dante internal net: $lancidr");
 		}
 		
-		$View->Model= 'apache';
+		$View->Model= 'nginx';
 		if (!$View->Controller($output, 'SetWebalizerHostname', $lanip)) {
 			cwwui_syslog(LOG_ERR, __FILE__, __FUNCTION__, __LINE__, "Failed setting webalizer hostname: $lanip");
 		}
@@ -183,7 +183,7 @@ function ApplyConfig()
 function FirstBootTasks()
 {
 	// Run symon script to create rrd files again for cpu and sensor probes
-	exec('/bin/sh /usr/local/share/symon/c_smrrds.sh all');
+	exec('/bin/sh /usr/local/share/examples/symon/c_smrrds.sh all');
 
 	// Create initial web server statistics page
 	exec('/usr/local/bin/webalizer');
@@ -345,7 +345,7 @@ function GetIfSelection()
 
 		$warn= PrintIfConfig($lanif, $wanif);
 		
-		$selection= readline('Type done to accept or press enter to try again: ');
+		$selection= comix_readline('Type done to accept or press enter to try again: ');
 		if ($selection === 'done') {
 			break;
 		}
@@ -408,7 +408,7 @@ function PrintIfConfig($lanif, $wanif)
 function ReadIfSelection($prompt, $ifs)
 {
 	while (TRUE) {
-		$selection= readline($prompt);
+		$selection= comix_readline($prompt);
 		if (($selection === '') || in_array($selection, $ifs)) {
 			return $selection;
 		}
@@ -421,7 +421,7 @@ function ReadIfSelection($prompt, $ifs)
  * @param[in]	$prompt	string Message to display.
  * @return User input, no newlines.
  */
-function readline($prompt= '')
+function comix_readline($prompt= '')
 {
     echo $prompt;
     return rtrim(fgets(STDIN), "\n");

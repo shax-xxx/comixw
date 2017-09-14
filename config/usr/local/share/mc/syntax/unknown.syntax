@@ -3,11 +3,18 @@ context default
     keyword /\* brown
     keyword \*/ brown
     keyword // brown
-    
-    
+
+
 context linestart # \n brightred
     keyword \\\n yellow
     keyword /\**\*/ brown
     keyword //*\n brown
     keyword "+" red
-    keyword <+> red	    
+    keyword <+> red
+
+context linestart ; \n brightred
+    keyword \\\n yellow
+    keyword /\**\*/ brown
+    keyword //*\n brown
+    keyword "+" red
+    keyword <+> red

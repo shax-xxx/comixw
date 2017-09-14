@@ -57,10 +57,10 @@ class Snortalerts extends Snort
 			$re_to= "($Re_Ip)";
 			$re_port= '(:\d+|)';
 
-			//Jun 27 18:12:41 comixwall snort[2875]: [122:1:0] (portscan) TCP Portscan[Priority: 3]: {RESERVED} 10.0.0.11 -> 10.0.0.13
-			//Jun 27 18:12:45 comixwall snort[2875]: [116:59:1] (snort_decoder): Tcp Window Scale Option found with length > 14[Priority: 3]: {TCP} 10.0.0.11:52936 -> 10.0.0.13:25
-			//Aug  6 12:35:41 comixwall snort[2875]: [1:853:10] WEB-CGI wrap access [Classification: Attempted Information Leak] [Priority: 2]: {TCP} 10.0.0.11:35690 -> 209.85.129.147:80
-			$re= "/$re_triplet\s*$re_report\s*$re_priority:\s*$re_proto\s+$re_from$re_port\s*->\s*$re_to$re_port$/";
+			//Jun 27 18:12:41 comixwall snort[2875]: [122:1:0] (portscan) TCP Portscan[Priority: 3] {RESERVED} 10.0.0.11 -> 10.0.0.13
+			//Jun 27 18:12:45 comixwall snort[2875]: [116:59:1] (snort_decoder): Tcp Window Scale Option found with length > 14[Priority: 3] {TCP} 10.0.0.11:52936 -> 10.0.0.13:25
+			//Aug  6 12:35:41 comixwall snort[2875]: [1:853:10] WEB-CGI wrap access [Classification: Attempted Information Leak] [Priority: 2] {TCP} 10.0.0.11:35690 -> 209.85.129.147:80
+			$re= "/$re_triplet\s*$re_report\s*$re_priority\s*$re_proto\s+$re_from$re_port\s*->\s*$re_to$re_port$/";
 			if (preg_match($re, $logline, $match)) {
 				$cols['Log']= $match[1];
 				$cols['Prio']= $match[2];

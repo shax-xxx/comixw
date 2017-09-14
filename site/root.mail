@@ -5,6 +5,9 @@ From: soner@comixwall.org (Soner Tari)
 To: root
 Subject: Welcome to ComixWall 4.6!
 
+DEPRECATED TEXT BELOW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
 This is the 7th public release of ComixWall ISG. ComixWall is still the only fully FOSS and freely available UTM firewall running on OpenBSD. You can use the web administration interface to configure and monitor your system and the network. Supported architectures are amd64 and i386 (ComixWall is one of the few UTM firewalls with 64-bit support).
 
 There are major changes in this version. Updated web user interface is the result of a 4+ months of intense refactoring and development effort. There are changes to other parts of the system too. The changes are too numerous to list here.

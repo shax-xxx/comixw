@@ -44,13 +44,13 @@ if ($_POST) {
 	}
 	else if ($_POST['Rotate']) {
 		$View->Controller($Output, 'RotateLogFile', $LogFile);
-		// httpd may be killed during rotation
+		// nginx may be killed during rotation
 		header('Location: '.$_SERVER['REQUEST_URI']);
 		exit;
 	}
 	else if ($_POST['RotateAll']) {
 		$View->Controller($Output, 'RotateAllLogFiles');
-		// httpd is killed during rotation
+		// nginx is killed during rotation
 		header('Location: '.$_SERVER['REQUEST_URI']);
 		exit;
 	}

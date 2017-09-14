@@ -1,5 +1,5 @@
 <?php
-/* $ComixWall: apachelogs.php,v 1.11 2009/11/23 08:47:43 soner Exp $ */
+/* $ComixWall: nginxlogs.php,v 1.11 2009/11/23 08:47:43 soner Exp $ */
 
 /*
  * Copyright (c) 2004-2009 Soner Tari.  All rights reserved.
@@ -34,16 +34,16 @@
  */
 
 /** @file
- * Apache access logs.
+ * Nginx access logs.
  */
 
-require_once($MODEL_PATH.'apache.php');
+require_once($MODEL_PATH.'nginx.php');
 
-class Apachelogs extends Apache
+class Nginxlogs extends Nginx
 {
-	public $Name= 'apachelogs';
+	public $Name= 'nginxlogs';
 	
-	public $LogFile= '/var/www/logs/access_log';
+	public $LogFile= '/var/www/logs/access.log';
 
 	function ParseLogLine($logline, &$cols)
 	{
@@ -59,8 +59,9 @@ class Apachelogs extends Apache
 		$link= '(\S*)';
 		$code= '(\d+)';
 		$size= '(\d+|-)';
+		$rest= '(.*)';
 
-		$re= "/^$ip\s+.*\s+$datetime\s+\"$mtd\s+$link\s+HTTP\/\d+\.\d+\"\s+$code\s+$size$/";
+		$re= "/^$ip\s+.*\s+$datetime\s+\"$mtd\s+$link\s+HTTP\/\d+\.\d+\"\s+$code\s+$size\s+$rest$/";
 		if (preg_match($re, $logline, $match)) {
 			$cols['IP']= $match[1];
 			$cols['Date']= $match[2];
@@ -70,6 +71,7 @@ class Apachelogs extends Apache
 			$cols['Link']= $match[5];
 			$cols['Code']= $match[6];
 			$cols['Size']= $match[7];
+			$cols['Other']=$match[8];
 			if ($cols['Size'] == '-') {
 				$cols['Size']= 0;
 			}

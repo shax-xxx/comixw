@@ -37,9 +37,9 @@
  * ComixWall logs.
  */
 
-require_once($MODEL_PATH.'apache.php');
+require_once($MODEL_PATH.'nginx.php');
 
-class Cwlogs extends Apache
+class Cwlogs extends Nginx
 {
 	function ParseLogLine($logline, &$cols)
 	{

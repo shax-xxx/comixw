@@ -1,5 +1,5 @@
 <?php
-/* $ComixWall: apache.php,v 1.17 2009/11/16 12:05:36 soner Exp $ */
+/* $ComixWall: nginx.php,v 1.17 2009/11/16 12:05:36 soner Exp $ */
 
 /*
  * Copyright (c) 2004-2009 Soner Tari.  All rights reserved.
@@ -35,23 +35,23 @@
 
 require_once($MODEL_PATH.'model.php');
 
-class Apache extends Model
+class Nginx extends Model
 {
-	public $Name= 'apache';
+	public $Name= 'nginx';
 	public $User= 'root|www';
 	
 	public $NVPS= '\h';
-	public $ConfFile= '/var/www/conf/httpd.conf';
-	public $LogFile= '/var/www/logs/error_log';
+	public $ConfFile= '/etc/nginx/nginx.conf';
+	public $LogFile= '/var/www/logs/error.log';
 
-	public $VersionCmd= '/usr/sbin/httpd -v';
+	public $VersionCmd= '/usr/sbin/nginx -v 2>&1';
 	private $phpVersionCmd= '/usr/local/bin/php -v';
 
-	function Apache()
+	function Nginx()
 	{
 		parent::Model();
 		
-		$this->Proc= 'httpd';
+		$this->Proc= 'nginx';
 	
 		$this->Commands= array_merge(
 			$this->Commands,
@@ -72,27 +72,27 @@ class Apache extends Model
 	
 	function Restart()
 	{
-		return $this->RunShellCommand('/usr/sbin/apachectl restart');
+		return $this->RunShellCommand('/etc/rc.d/nginx restart');
 	}
 
 	function Stop()
 	{
-		return $this->RunShellCommand('/usr/sbin/apachectl stop');
+		return $this->RunShellCommand('/etc/rc.d/nginx stop');
 	}
 	
 	function ParseLogLine($logline, &$cols)
 	{
-		//[Mon Sep 10 22:00:01 2007] [notice] Accept mutex: sysvsem (Default: sysvsem)
-		$re_datetime= '\[([a-zA-Z]+)\s+([a-zA-Z]+)\s+(\d+)\s+(\d+:\d+:\d+)\s+(\d+)\]';
+		//2014/11/06 01:38:34 [notice] 11079#0: signal process started
+		$re_datetime= '(\d+\/\d+\/\d+)\s+(\d+:\d+:\d+)';
 		$re_loglevel= '\[([a-zA-Z]+)\]';
 		$re_rest= '(.*)';
 
 		$re= "/^$re_datetime\s+$re_loglevel\s+$re_rest$/";
 		if (preg_match($re, $logline, $match)) {
-			$cols['Date']= "$match[2] $match[3] $match[5]";
-			$cols['Time']= $match[4];
-			$cols['Level']= $match[6];
-			$cols['Log']= $match[7];
+			$cols['Date']= $match[1];
+			$cols['Time']= $match[2];
+			$cols['Level']= $match[3];
+			$cols['Log']= $match[4];
 		}
 		else {
 			if ($retval= $this->ParseSyslogLine($logline, $cols)) {

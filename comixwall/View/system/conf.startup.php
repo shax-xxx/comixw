@@ -65,7 +65,7 @@ $ServiceDescs= array(
 	'dhcpd_flags'					=> _TITLE2('DHCP Server'),
 	'named_flags'					=> _TITLE2('DNS Server'),
 	'ftpproxy_flags'				=> _TITLE2('FTP Proxy'),
-	'httpd_flags'					=> _TITLE2('Web Server (WUI)'),
+	'nginx_flags'					=> _TITLE2('Web Server (WUI)'),
 	'ntpd_flags'					=> _TITLE2('Network Time'),
 	'apmd_flags'					=> _TITLE2('Advanced Power Management'),
 	);

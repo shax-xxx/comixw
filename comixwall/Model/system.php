@@ -89,7 +89,7 @@ class System extends Model
 			'dhcpd_flags',
 			'named_flags',
 			'ftpproxy_flags',
-			'httpd_flags',
+			'nginx_flags',
 			'ntpd_flags',
 			'apmd_flags',
 			);
@@ -622,7 +622,7 @@ class System extends Model
 		// Failing to clear the cache dir is not fatal
 		exec("/bin/rm -f ${VIEW_PATH}symon/rrds/localhost/*.rrd 2>&1", $output, $retval);
 		if ($retval === 0) {
-			exec('/bin/sh /usr/local/share/symon/c_smrrds.sh all 2>&1', $output, $retval);
+			exec('/bin/sh /usr/local/share/examples/symon/c_smrrds.sh all 2>&1', $output, $retval);
 			if ($retval !== 0) {
 				$success= FALSE;
 			}
@@ -930,7 +930,7 @@ class System extends Model
 
 	/** Rotate log file via newsyslog.
 	 *
-	 * Daemonized, because newsyslog may kill httpd, hence parent.
+	 * Daemonized, because newsyslog may kill nginx, hence parent.
 	 */
 	function DaemonizedRotateLogFile($file)
 	{
@@ -969,7 +969,7 @@ class System extends Model
 
 	/** Rotate all log files via newsyslog.
 	 *
-	 * Daemonized, because newsyslog kills httpd, hence parent,
+	 * Daemonized, because newsyslog kills nginx, hence parent,
 	 * stopping rotation in the middle, e.g. before compressing files.
 	 */
 	function DaemonizedRotateAllLogFiles()
@@ -1008,7 +1008,7 @@ class System extends Model
 				return FALSE;
 			}
 			// The child is daemonized now, hence survives even if its process group is killed.
-			// This is necessary when rotating httpd logs.
+			// This is necessary when rotating nginx logs.
 
 			$argv= array();
 			if ($param !== '') {
@@ -1022,8 +1022,9 @@ class System extends Model
 	 */
 	function SetPassword($user, $passwd)
 	{
-		/// Passwords in htpasswd file are SHA1 encrypted.
-		exec("/usr/bin/htpasswd -b -s $this->passwdFile $user $passwd 2>&1", $output, $retval);
+		/// Passwords in htpasswd file are bcrypt(3) encrypted.
+		$hash = password_hash("$passwd", PASSWORD_DEFAULT);
+		exec("echo '$user:$hash' >> $this->passwdFile 2>&1", $output, $retval);
 		if ($retval === 0) {
 			return TRUE;
 		}
