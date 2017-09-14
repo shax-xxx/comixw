@@ -3,6 +3,9 @@
 # flags=none is ComixWall specific, to actually force
 # ComixWall upgrade script to set owner and permissions.
 
+root			type=dir mode=0700 uname=root gname=wheel
+.profile		type=file mode=0600 uname=root gname=wheel
+..	#root
 var			type=dir mode=0755 uname=root gname=wheel
 clamav			type=dir mode=0755 uid=539 gid=539 flags=none
 quarantine		type=dir mode=0600 uid=539 gid=539 flags=none
@@ -22,8 +25,6 @@ main.cvd		type=file mode=0644 uid=539 gid=539
 bytecode.cvd		type=file mode=0644 uid=539 gid=539
 mirrors.dat		type=file mode=0644 uid=539 gid=539
 ..	#var/db/clamav
-imspector		type=dir mode=0755 uid=702 gid=702 flags=none
-..	#var/db/imspector
 spamassassin		type=dir mode=0755 uid=506 gid=506 flags=none
 tmp			type=dir mode=0755 uid=506 gid=506 flags=none
 ..	#var/db/spamassassin/tmp
@@ -116,6 +117,9 @@ downloadmanagers	type=dir mode=0755 uname=root gname=wheel
 fancy.conf		type=file mode=0644 uname=root gname=wheel
 ..	#etc/dansguardian/downloadmanagers
 lists			type=dir mode=0755 uname=root gname=wheel
+bannedrooms		type=dir mode=0755 uname=root gname=wheel
+default			type=file mode=0644 uname=root gname=wheel
+..	#etc/dansguardian/lists/bannedrooms
 bannedextensionlist4	type=file mode=0644 uname=root gname=wheel
 bannedmimetypelist4	type=file mode=0644 uname=root gname=wheel
 bannedsitelist		type=file mode=0644 uname=root gname=wheel
@@ -134,11 +138,9 @@ dansguardianf2.conf	type=file mode=0644 uname=root gname=wheel
 dansguardianf3.conf	type=file mode=0644 uname=root gname=wheel
 dansguardianf4.conf	type=file mode=0644 uname=root gname=wheel
 ..	#etc/dansguardian
-imspector		type=dir mode=0755 uname=root gname=wheel
-acl.txt		type=file mode=0644 uname=root gname=wheel
-badwords.txt		type=file mode=0644 uname=root gname=wheel
-imspector.conf		type=file mode=0644 uname=root gname=wheel
-..	#etc/imspector
+ssh			type=dir mode=0755 uname=root gname=wheel
+sshd_config		type=file mode=0644 uname=root gname=wheel
+..	#etc/ssh
 mail			type=dir mode=0755 uname=root gname=wheel
 spamassassin		type=dir mode=0755 uname=root gname=wheel
 local.cf		type=link mode=0644 uname=root gname=wheel
@@ -256,6 +258,11 @@ template_nobypass.html	type=file mode=0644 uname=root gname=wheel
 ..	#usr/local/share/dansguardian/languages/ukenglish
 ..	#usr/local/share/dansguardian/languages
 ..	#usr/local/share/dansguardian
+mc			type=dir mode=0755 uname=root gname=wheel
+syntax			type=dir mode=0755 uname=root gname=wheel
+unknown.syntax		type=file mode=0644 uname=root gname=wheel
+..	#usr/local/share/mc/syntax
+..	#usr/local/share/mc
 ..	#usr/local/share
 ..	#usr/local
 ..	#usr

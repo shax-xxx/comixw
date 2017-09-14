@@ -405,7 +405,6 @@ GetPkgDesc() {
 		snort-*) 				pkgdesc="Intrusion Detection" ;;
 		snortrules-*)			pkgdesc="Intrusion Detection Rules" ;;
 		snortips-*) 			pkgdesc="Intrution Prevention" ;;
-		imspector-*) 			pkgdesc="IM Proxy" ;;
 		openvpn-*) 				pkgdesc="OpenVPN" ;;
 		dante-*) 				pkgdesc="SOCKS Proxy" ;;
 		webalizer-*) 			pkgdesc="Web Server Logs Analyzer" ;;
@@ -620,7 +619,7 @@ __EOT
 			smtp-gated-*)
 				_pkgshortname=${_f%-*}
 				;;
-			#php-5.3.14p1.tgz
+			#php-5.3.21.tgz
 			php-*)
 				_pkgshortname=${_f%-*}
 				;;
@@ -630,7 +629,7 @@ __EOT
 				_pkgaddopts=-u
 				_pkgname=${_f%%-*}
 				case $_f in
- 				#dansguardian-2.10.1.1.tgz
+ 				#dansguardian-2.12.0.3.tgz
 				dansguardian-*)
 					# Delete previous clamd flavor
 					pkg_delete $_pkgname
@@ -649,7 +648,7 @@ __EOT
 				p3scan-*)
 					_pkgaddopts="-u -F update"
 					;;
-  				#squid-2.7.STABLE9p19.tgz
+  				#squid-2.7.STABLE9p22.tgz
 				squid-*)
 					_pkgaddopts="-u -F update"
 					;;
@@ -657,7 +656,7 @@ __EOT
 				smtp-gated-*)
 					_pkgname=${_f%-*}
 					;;
-  				#php-5.3.14p1.tgz
+  				#php-5.3.21.tgz
 				php-*)
 					_pkgname=${_f%-*}
 					_pkgaddopts="-u -F update"
@@ -668,7 +667,7 @@ __EOT
 					# hence pkg_add cannot update
 					pkg_delete -F dependencies $_pkgname
 					;;
-  				#snort-2.9.3.1.tgz
+  				#snort-2.9.4.0.tgz
 				snort-*)
 					# plugins lying around (untouched during upgrade) of the previous
 					# version prevent snort starting, clean them up
@@ -707,10 +706,10 @@ __EOT
 			dansguardian-*)
 				chown -R _dansguardian:_dansguardian $DESTDIR/var/log/dansguardian/
 				;;
-			imspector-*)	echo "Post-processing for $_f: Setting /dev/pf permissions..."
-				chmod a+r /dev/pf
-				chmod g+w /dev/pf
-				;;
+#			imspector-*)	echo "Post-processing for $_f: Setting /dev/pf permissions..."
+#				chmod a+r /dev/pf
+#				chmod g+w /dev/pf
+#				;;
 			php-*)
 				pkg_add php-pcntl
 				;;
@@ -1140,9 +1139,9 @@ finish_up() {
 		/var/www/htdocs/comixwall/View/pmacct/protograph/createrrd.sh
 	fi
 
-	echo "Some fixes..."
-	cd /usr/local/lib/snort_dynamicengine
-	ln -s libsf_engine.so libsf_engine.so.3.0
+#	echo "Some fixes..."
+#	cd /usr/local/lib/snort_dynamicengine
+#	ln -s libsf_engine.so libsf_engine.so.3.0
 
 	# Pat on the back.
 	cat <<__EOT
@@ -1166,7 +1165,7 @@ __EOT
 # #######################################################################
 # Initial actions common to both installs and upgrades.
 # #######################################################################
-VERSION='5.2'
+VERSION='5.3'
 ARCH=$(/usr/bin/machine)
 
 VMAJ=${VERSION%%\.*}
@@ -1197,31 +1196,30 @@ CDDEVS=$(scan_dmesg "${MDCDDEVS:-/^cd[0-9][0-9]* /s/ .*//p}")
 [[ -z $CDDEVS ]] && CDDEVS="cd0,cd1,cd2"
 
 # Selected sets will be installed in the order they are listed in $THESETS.
-THESETS="clamav-0.97.5p0.tgz \
+THESETS="clamav-0.97.6.tgz \
 		clamavdb.tar.gz \
 		p5-Mail-SpamAssassin-3.3.2p6.tgz \
 		p3scan-2.3.2.tgz \
 		smtp-gated-1.4.18.8.tgz \
-		dansguardian-2.10.1.1.tgz \
+		dansguardian-2.12.0.3.tgz \
 		bigblacklist_comixwall.tar.gz \
-		squid-2.7.STABLE9p19.tgz \
-		snort-2.9.3.1.tgz \
-		snortrules-snapshot-2931.tar.gz \
+		squid-2.7.STABLE9p22.tgz \
+		snort-2.9.4.0.tgz \
+		snortrules-snapshot-2940.tar.gz \
 		snortips-4.6.tgz \
-		imspector-0.9.tgz \
 		openvpn-2.2.2p1.tgz \
 		dante-1.3.2p0.tgz \
 		webalizer-2.23.05.29p2.tgz \
-		symon-2.85.tgz \
+		symon-2.86.tgz \
 		pmacct-0.12.5p1.tgz \
 		pftop-0.7p9.tgz \
-		php-5.3.14p1.tgz \
-		mc-4.8.1.1.tgz \
-		wget-1.13.4.tgz \
+		php-5.3.21.tgz \
+		mc-4.8.1.7.tgz \
+		wget-1.14.tgz \
 		$CW_WEBIF_TARFILE \
 		$CW_CONFIG_TARFILE"
 
-SANESETS="php-5.3.14p1.tgz \
+SANESETS="php-5.3.21.tgz \
 		$CW_WEBIF_TARFILE"
 
 # Introduce ourselves.

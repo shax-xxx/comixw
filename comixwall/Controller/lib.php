@@ -97,8 +97,6 @@ $ModelFiles= array(
 	'spamd'				=> 'spamd.php',
 	'spamdgreydb'		=> 'spamd.php',
 	'spamdwhitedb'		=> 'spamd.php',
-	'imspector'			=> 'imspector.php',
-	'imlogs'			=> 'imlogs.php',
 	'clamav'			=> 'clamav.php',
 	'clamd'				=> 'clamd.php',
 	'freshclam'			=> 'freshclam.php',
@@ -136,8 +134,6 @@ $Models= array(
 	'spamd'				=> 'Spamd',
 	'spamdgreydb'		=> 'Spamd',
 	'spamdwhitedb'		=> 'Spamd',
-	'imspector'			=> 'Imspector',
-	'imlogs'			=> 'Imlogs',
 	'clamav'			=> 'Clamav',
 	'clamd'				=> 'Clamd',
 	'freshclam'			=> 'Freshclam',
@@ -297,7 +293,6 @@ function IsFilePath($filepath)
 		// For CVS Tag displayed in the footer
 		|| preg_match('|^/var/www/htdocs/comixwall/View/\w[\w./-]*$|', $filepath)
 		// Messaging logs
-		|| preg_match('|^/var/log/imspector/\w[^$`]*$|', $filepath)
 		|| preg_match('|^/var/www/logs/\w[\w./-]*$|', $filepath)
 		|| preg_match('|^/var/squid/logs/\w[\w./-]*$|', $filepath)
 		// Statistics and uncompressed logs

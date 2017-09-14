@@ -1,6 +1,9 @@
 # $ComixWall: comixwall.files,v 1.43 2009/12/02 10:01:13 soner Exp $
 # Hand-crafted configuration files specification for ComixWall.
+root/.profile,600,root,wheel
+etc/ssh/sshd_config,644,root,wheel
 etc/dansguardian/downloadmanagers/fancy.conf,644,root,wheel
+etc/dansguardian/lists/bannedrooms/default,644,root,wheel
 etc/dansguardian/lists/bannedextensionlist4,644,root,wheel
 etc/dansguardian/lists/bannedmimetypelist4,644,root,wheel
 etc/dansguardian/lists/bannedsitelist,644,root,wheel
@@ -17,9 +20,6 @@ etc/dansguardian/dansguardianf1.conf,644,root,wheel
 etc/dansguardian/dansguardianf2.conf,644,root,wheel
 etc/dansguardian/dansguardianf3.conf,644,root,wheel
 etc/dansguardian/dansguardianf4.conf,644,root,wheel
-etc/imspector/acl.txt,644,root,wheel
-etc/imspector/badwords.txt,644,root,wheel
-etc/imspector/imspector.conf,644,root,wheel
 etc/mail/spamassassin/local-de.cf,644,root,wheel
 etc/mail/spamassassin/local-en.cf,644,root,wheel
 etc/mail/spamassassin/local-fr.cf,644,root,wheel
@@ -97,6 +97,7 @@ usr/local/share/dansguardian/languages/turkish/template_nobypass.html,644,root,w
 usr/local/share/dansguardian/languages/ukenglish/fancydmtemplate.html,644,root,wheel
 usr/local/share/dansguardian/languages/ukenglish/template.html,644,root,wheel
 usr/local/share/dansguardian/languages/ukenglish/template_nobypass.html,644,root,wheel
+usr/local/share/mc/syntax/unknown.syntax,644,root,wheel
 var/cron/tabs/root,600,root,wheel
 var/log/dansguardian/dansguardian.log,640,root,wheel
 var/log/snort/snort.log,640,root,wheel

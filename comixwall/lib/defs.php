@@ -174,7 +174,6 @@ $ModelsToStat= array(
 	'clamav',
 	'p3scan',
 	'smtp-gated',
-	'imspector',
 	'dhcpd',
 	'named',
 	'openvpn',
